@@ -1,0 +1,284 @@
+#ninjac {
+  background: url("imgs/sit.png") no-repeat scroll 100% 50% rgba(0, 0, 0, 0);
+  box-sizing: content-box;
+  left: 0;
+  margin: 0 0 0 -200px;
+  padding: 0 32px 0 0;
+  position: fixed;
+  top: 30%;
+  -webkit-transition: all 0.3s ease-out 5s;
+  transition: all 0.3s ease-out 5s;
+  overflow:hidden;
+  z-index: 9999;
+  width:200px;
+}
+#ninjac:hover {
+	background: url("imgs/stand.png") no-repeat scroll 100% 50% rgba(0, 0, 0, 0);
+}
+
+
+
+#ninjac .nj_content {
+  background: none repeat scroll 0 0 #222;
+  border-radius: 0 5px 5px 0;
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+}
+
+#ninjac .nj_content label {
+	color:#fff;
+}
+
+.openbutton {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 32px;
+}
+
+.nj_mail {
+  background: none repeat scroll 0 0 #eee;
+  border: 0 none;
+  border-radius: 3px;
+  margin: 3px;
+  padding: 3px 4px;
+}
+
+input[type="submit"].nj_submit {
+  background: none repeat scroll 0 0 #6c6c6c;
+  border: 0 none;
+  border-radius: 30px;
+  color: #fff;
+  margin: 2px 0 0;
+  padding: 3px 10px;
+}
+
+#ninjac.error  {
+	margin-left:-200px;
+	transition:all 0.3s ease-out 5s;
+	background: url("imgs/jump.png") no-repeat scroll 100% 50% rgba(0, 0, 0, 0);
+	-webkit-animation: autoclose 5s forwards; /* Chrome, Safari, Opera */
+    animation: autoclose 5s forwards;
+	-webkit-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+	border:0 none;
+}
+
+#ninjac.error  .nj_content{
+	background:#732222;
+	
+}
+
+#ninjac:hover, #ninjac.error:hover {
+	margin-left:0;
+	transition:all 0.3s ease-out 0s;
+	-webkit-animation: autoclose;
+	animation: autoclose;
+	-webkit-animation-play-state:paused;
+	animation-play-state:paused;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes autoclose {
+    0%{margin-left: 0;}
+    90%{margin-left: 0;}
+    100%{margin-left: -200px;}
+}
+
+/* Standard syntax */
+@keyframes autoclose {
+    0% {margin-left: 0;}
+    90% {margin-left: 0;}
+    100% {margin-left: -200px;}
+}
+
+#ninjac.logged{
+	background: url("imgs/kick.png") no-repeat scroll 100% 50% rgba(0, 0, 0, 0);
+	background-size:32px 32px;
+}
+
+#ninjac.logged  .nj_content{
+	padding: 20px 5px;
+}
+
+#ninjac a.nj_logout {
+  background: none repeat scroll 0 0 #227522;
+  border-radius: 3px;
+  font-weight: bold;
+  padding: 3px 10px;
+  color: #aaa;
+}
+
+#ninjac.not_fun {
+  background: none repeat scroll 0 0 #eee;
+  border-radius: 3px;
+}
+
+#ninjac.not_fun .openbutton {
+  background: none repeat scroll 0 0 transparent;
+  border-color: transparent #222;
+  border-style: solid;
+  border-width: 15px 0 15px 20px;
+  box-sizing: content-box;
+  display: block;
+  height: 0;
+  margin-top: -15px;
+  right: 6px;
+  top: 50%;
+  transition: all 0.3s ease 5s;
+  width: 0;
+}
+
+#ninjac.not_fun.error .openbutton {
+	border-color: transparent #732222 transparent #732222;
+}
+
+#ninjac.not_fun:hover .openbutton {
+	border-width: 15px 20px 15px 0px;
+	transition: all 0.3s ease 0s;
+}
+
+
+/*******************/
+/*******************/
+/** configuration **/
+/*******************/
+/*******************/
+
+#beyour .ninjaform {
+  background: none repeat scroll 0 0 #333;
+  border-radius: 3px;
+  box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1);
+  color: #cfcfcf;
+  padding: 10px 20px;
+}
+
+#beyour .ninjaform legend {
+  background: none repeat scroll 0 0 transparent;
+  border: 0 none;
+  color: #fff;
+  display: block;
+  float: none;
+  font-size: 18px;
+  padding: 0 0 5px;
+  width: 100%;
+}
+
+#beyour .ninjaform legend {
+	border-bottom:1px solid;
+}
+
+#beyour fieldset {
+  background: none repeat scroll 0 0 transparent;
+  border: 0 none;
+  color: #fff;
+}
+
+#beyour .ninjaform .avv {
+  background: none repeat scroll 0 0 #666666;
+  font-size: 13px;
+  font-style: italic;
+  margin: 0 0 10px;
+  padding: 5px;
+}
+
+#beyour .ninjaform label {
+  color: #fff;
+  display: inline-block;
+  float: none;
+  font-size: 14px;
+  font-weight: normal;
+  position: relative;
+  text-align: left;
+  text-shadow: 0 0;
+  width: 300px;
+}
+
+#beyour .ninjaform input[type="checkbox"],
+#beyour .ninjaform input[type="radio"] {
+  float: right;
+}
+
+#beyour input.button.btn {
+  background: none repeat scroll 0 0 #ddd;
+  border: 0 none;
+  border-radius: 3px;
+  color: #333;
+  display: block;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 5px 15px;
+  text-shadow: 0 1px 0 #fff;
+  width: 150px;
+}
+
+h2 .small {
+	font-size:65%;
+	color:#999;
+}
+
+
+/* ALERTS */
+
+
+#alerts {
+  background: none repeat scroll 0 0 #DFF8DF;
+  border: 1px solid #338899;
+  border-radius: 3px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  color: #5A5A5A;
+  display: none;
+  font-size: 120%;
+  left: 50%;
+  margin: 0 0 0 -170px;
+  padding: 20px;
+  position: fixed;
+  text-align: center;
+  top: 30%;
+  width: 300px;
+  z-index: 100;
+}
+#alerts .wait {
+  color: #99CCBB;
+  font-size: 170%;
+  left: 2px;
+  position: absolute;
+  top: 1px;
+  vertical-align: middle;
+}
+
+#alerts .closeme {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.alertButtons { 
+  margin: 10px 0 0;
+}
+
+.alertButtons span {
+  background: none repeat scroll 0 0 #DDDDDD;
+  border: 1px solid #CCCCCC;
+  border-radius: 2px;
+  box-shadow: 0 20px 10px -10px #FFFFFF inset;
+  color: #008000;
+  cursor: pointer;
+  font-size: 120%;
+  margin: 0 4px;
+  padding: 4px;
+  text-shadow: 0 1px 0 #FFFFFF;
+  width: 30px;
+}
+
+.alertButtons .cancel {
+	color:#df0000;
+}
+
+.alertmsg {
+  padding: 5px;
+}

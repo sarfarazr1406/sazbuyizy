@@ -1,0 +1,72 @@
+/*
+* WhatsApp Sharing Button v1.1
+* @author kik-off.com <info@kik-off.com>
+* @file whatsappbutton.css
+*/
+.whatsapp-button {
+    display: block;
+    margin-bottom: 20px;
+}
+.btn-whatsapp {
+    background-color: #56b94c;
+    border: 1px solid #56b94c;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+	box-shadow: none;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    letter-spacing: 0.4px;
+    position: relative;
+    text-decoration: none;
+    text-transform: none;
+}
+.btn-whatsapp:hover {
+    background-color: #21a049;
+	border: 1px solid #21a049;
+    color: #ffffff;
+    text-decoration: none;
+}
+.btn-whatsapp:focus,
+.btn-whatsapp:active { 
+    background-color: #3da84a;
+	border: 1px solid #3da84a;
+	color: #ffffff;
+    text-decoration: none;
+}
+.btn-whatsapp-16 span,
+.btn-whatsapp-24 span,
+.btn-whatsapp-32 span {
+    display: inline-block;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.btn-whatsapp-16 span {
+    background-image: url('../img/whatssap-icon-16.png');
+	padding-left: 20px;
+	height: 16px;
+	line-height: 16px;
+}
+.btn-whatsapp-24 span {
+    background-image: url('../img/whatssap-icon-24.png');
+	padding-left: 28px;
+	height: 24px;
+	line-height: 24px;
+}
+.btn-whatsapp-32 span {
+    background-image: url('../img/whatssap-icon-32.png');
+	padding-left: 36px;
+	height: 32px;
+	line-height: 32px;
+}
+.btn-whatsapp.btn-xs {
+    font-size: 13px;
+}
+.btn-whatsapp.btn-sm {
+    font-size: 16px;
+}
+.btn-whatsapp.btn-lg {
+    font-size: 24px;
+	max-width: 370px;
+}

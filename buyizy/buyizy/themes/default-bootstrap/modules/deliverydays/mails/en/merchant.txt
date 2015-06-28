@@ -1,0 +1,7 @@
+Hello {firstname} {lastname},  here is the delivery date requested for the order {id_order}.
+
+{delivery_day}
+
+Regards.
+
+{shop_url} powered by PrestaShop™

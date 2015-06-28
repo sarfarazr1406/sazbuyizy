@@ -1,0 +1,1 @@
+*ERROR* 	2015/04/27 - 19:44:20: Unknown column 'id_shop_group' in 'field list'<br /><br /><pre>SELECT GROUP_CONCAT(id_shop_group) as groupid FROM ps_sendin_newsletter  WHERE email = "manojvirmani47@gmail.com" GROUP BY email LIMIT 1</pre> at line 635 in file classes/db/Db.php

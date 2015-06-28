@@ -1,0 +1,16 @@
+--- patch\1.2.5.0\PDF.php.original 
++++ patch\1.2.5.0\PDF.php 
+@@ -425,6 +425,13 @@
+ 		foreach($history as $h)
+ 			if ($h['id_order_state'] == _PS_OS_SHIPPING_)
+ 				$shipping_date = $h['date_add'];
++		/* start deliverydays */
++			if (!isset($shipping_date) &&
++				($module = Module::getInstanceByName('deliverydays')) &&
++				($module->active) &&
++				($deliveryDay = $module->getDate($order->id_cart)))
++				$shipping_date = $deliveryDay;
++		/* end deliverydays */
+ 		$pdf->Ln(12);
+ 		$pdf->SetFillColor(240, 240, 240);
+ 		$pdf->SetTextColor(0, 0, 0);

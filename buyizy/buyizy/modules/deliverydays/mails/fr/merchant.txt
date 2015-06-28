@@ -1,0 +1,7 @@
+Bonjour {firstname} {lastname}, voici la date de livraison demandés pour la commande {id_order}.
+
+{delivery_day}
+ 
+Bonne livraison. 
+ 
+{shop_name} réalisé avec PrestaShop™

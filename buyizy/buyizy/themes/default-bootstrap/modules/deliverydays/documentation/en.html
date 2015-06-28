@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      Delivery days
+    </title>
+    <meta name="description" content="">
+    <meta name="author" content="Samdha">
+    <meta name="copyright" content="Samdha">
+    <meta name="date" content="2015-01-15T00:00:00+01:00">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="https://html5shim.googlecode.com/svn/trunk/html5.js">
+      </script>
+    <![endif]-->
+  </head>
+  <body id="top">
+    <div class="container" id="documenter_content">
+<section>
+<div class="page-header">
+<h3>Introduction</h3>
+</div>
+<p>This module allows the customer to choose a delivery day.
+</p><p>You can export the orders and deliver products to prepare for a specific date.
+</p><p>If you want the requested delivery date may appear on your order and delivery. In this case a modification Prestashop files is required.
+</p>
+</section>
+      <section id="installation">
+        <div class="page-header">
+          <h3>
+            Module Installation
+          </h3>
+        </div>
+        <h4 id="installation_install_from_the_administration_panel">
+          Installing from the administration panel
+        </h4>
+        <p>
+          This is the simplest method, but it may not work in some cases. If this does not work, use the manual installation method presented below.
+        </p>
+        <p>
+          In the Modules tab, click to add a new module.
+        </p>
+        <p>
+          Click Browse to open a dialog box that allows you to search in your computer, select the file and confirm the dialog box. Finally, click Download this module.
+        </p>
+        <p>
+          The module will appear in your list of modules in the Module tab.
+        </p>
+        <p>
+          Click the Install button to install the module.
+        </p>
+        <h4 id="installation_install_a_module_manually">
+          Install a module manually
+        </h4>
+        <p>
+          Use this method if the manual installation does not work. It may seem tedious, a priori, for beginners, because it requires some knowledge of FTP, etc., but it is no more complex and perhaps more convenient because it works every time.
+        </p>
+        <p>
+          In addition, the expertise required for installation is pretty basic and it is something that all store managers must master.
+        </p>
+        <p>
+          To manually install a new PrestaShop module:
+        </p>
+        <ol>
+          <li>
+            Unzip the module archive file (.zip). This should create a new folder.
+          </li>
+          <li>
+            Using your FTP client, place the folder in your PrestaShop folder /modules. Be careful to not upload this folder into the folder of another module (which can happen when you drag elements). Download the entire folder, not just the files in it.
+          </li>
+          <li>
+            Go to your back office, in the tab "Modules".
+          </li>
+          <li>
+            Locate the new module in the module list. You may have to scroll.
+          </li>
+          <li>
+            Click the Install button to install the module.
+          </li>
+        </ol>
+      </section>
+<section>
+<div class="page-header">
+<h3>Usage</h3>
+</div>
+<ol><li> Define the possible delivery days in the module configuration page
+</li><li>  When a customer places an order, a calendar appears next to the selection of the carrier allowing him to choose a delivery date.
+</li><li> The chosen date will appear in the order detail
+</li></ol>
+</section><section>
+<div class="page-header">
+<h3>Parameters</h3>
+</div>
+<h4>Manage by group</h4>
+<p>You can specify days for delivery globally for all clients or by groups of clients. It can be helpful if, for example, customers are classified by delivery area.
+</p>
+<h4>Enable for ...</h4>
+<p>This option only appears if "Manage by group" is enabled. Choose which groups of customers can choose a delivery day.
+</p>
+<h4>Required to order</h4>
+<p>Enable this option to force the client to choose a delivery day. He can not finalize its order otherwise.
+</p>
+<h4>Send delivery date to ...</h4>
+<p>When an order is created the module can send the requested delivery date by e-mail to an employee. Select "Nobody" to disable this feature.
+</p>
+<h4>Send delivery date to customer</h4>
+<p>When an order is created the module can send the requested delivery date to the customer.
+</p>
+<h4>Use separated mail</h4>
+<p>Appears only if "Send delivery date to customer" is enabled. The requested delivery date can be sent in the order confirmation or in a separate e-mail.
+</p><p>This email can be changed in the translation tool of Prestashop.
+</p>
+<h4>Show delivery date in orders list</h4>
+<p>This option adds a column "Delivery Date" in the "Commands" tab
+</p>
+</section><section>
+<div class="page-header">
+<h3>Delivery days</h3>
+</div>
+<p>If the "Manage by group" option is enabled, the following values ​​must be defined for each group.
+</p>
+<h4>Deliver</h4>
+<p>For each day of the week, choose if delivery is possible
+</p>
+<h4>Deadline for order</h4>
+<p>For each available day you must define the point at which it is no longer possible to order. For example, if to deliver an order on Tuesday it must be passed before Monday 2h PM, In front of Tuesday indicate 1 day(s) before at 14:00
+</p>
+<h4>Non delivery days</h4>
+<p>Select the days when the delivery is not possible regardless of day of the week, holidays, for example.
+</p>
+<h4>Days displayed</h4>
+<p>When a customer orders, he chooses a delivery day in a list (even if it is displayed as a calendar). Enter here the length of this list. Be careful, if you specify 30 days the list will not stop at the end of next month but will have 30 days of possible delivery. If you deliver only on Monday, there will be 30 Monday in the list.
+</p>
+<h4>Hourly ranges</h4>
+<p>In addition to the day of delivery, the customer can select an item in the list that you set here. Generally it's time slot (morning/evening or 9h/10h/11h ...) but you can put whatever you want.
+</p><p>Leave the list empty if you do not want to use this feature.
+</p>
+</section><section>
+<div class="page-header">
+<h3>Frequently Asked Questions</h3>
+</div>
+<h4>Some customers don't receive the delivery date by mail, why&#160;?</span></h4>
+<p>Maybe the mails have not been translated in the language of this customer.
+</p><p>In the /modules/deliverydays/mail, there is a folder by language ("fr" for french, "en" for english...) copy the "en" folder to "it" (for italian language) for example and translate the content of this new folder.
+</p><p>With recent versions of Prestashop you can translate the content of mails in Back Office &gt; <a href="/index.php?title=Tab:AdminTools&amp;action=edit&amp;redlink=1" class="new" title="Tab:AdminTools (page inexistante)">Tools</a> &gt; <a href="/index.php?title=Tab:AdminTranslations&amp;action=edit&amp;redlink=1" class="new" title="Tab:AdminTranslations (page inexistante)">Translations</a> &gt; E-mail template translations .
+</p>
+</section>
+    </div>
+  </body>
+</html>

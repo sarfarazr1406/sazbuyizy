@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      Jours de livraison
+    </title>
+    <meta name="description" content="">
+    <meta name="author" content="Samdha">
+    <meta name="copyright" content="Samdha">
+    <meta name="date" content="2015-01-15T00:00:00+01:00">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="https://html5shim.googlecode.com/svn/trunk/html5.js">
+      </script>
+    <![endif]-->
+  </head>
+  <body id="top">
+    <div class="container" id="documenter_content">
+<section>
+<div class="page-header">
+<h3>Présentation</h3>
+</div>
+<p>Ce module permet au client de choisir un jour de livraison.
+</p><p>Vous pouvez exporter les commandes à livrer et les produits à préparer pour une date précise.
+</p><p>Si vous le voulez la date de livraison demandée peut apparaître sur la facture et le bon de livraison. Dans ce cas une modification des fichiers de Prestashop est nécessaire.
+</p>
+</section>
+      <section id="installation">
+        <div class="page-header">
+          <h3>
+            Installation du module
+          </h3>
+        </div>
+        <h4 id="installation_install_from_the_administration_panel">
+          Installation à partir du panneau d'administration
+        </h4>
+        <p>
+          C'est la méthode la plus simple, mais elle peut ne pas fonctionner dans certains cas. Si cela ne fonctionne pas, utilisez la méthode d'installation manuelle présenté ci-dessous.
+        </p>
+        <p>
+          Dans l'onglet modules, cliquez sur ajouter un nouveau module.
+        </p>
+        <p>
+          Cliquez sur Parcourir pour ouvrir la boîte de dialogue qui vous permet de rechercher sur votre ordinateur, sélectionnez le fichier puis validez la boîte de dialogue. Enfin, cliquez sur Télécharger ce module.
+        </p>
+        <p>
+          Le module apparaîtra alors dans votre liste des modules sous l'onglet Module.
+        </p>
+        <p>
+          Cliquez sur le bouton Installer pour installer le module.
+        </p>
+        <h4 id="installation_install_a_module_manually">
+          Installer un module manuellement
+        </h4>
+        <p>
+          Utilisez cette méthode si l'installation manuelle ne fonctionne pas. Elle peut sembler fastidieuse, a priori, pour les débutants, parce qu'elle requiert un certain nombre de connaissances en FTP, etc., mais elle n'est pas plus complexe et peut-être même plus pratique car elle fonctionne à chaque fois.
+        </p>
+        <p>
+          En outre, le savoir-faire nécessaire à l'installation est assez basique et c'est quelque chose que tous les gestionnaires de boutique doivent maîtriser.
+        </p>
+        <p>
+          Pour installer manuellement un nouveau module de PrestaShop:
+        </p>
+        <ol>
+          <li>
+            Décompressez le fichier d'archive du module (.zip). Il devrait en résulter un nouveau dossier.
+          </li>
+          <li>
+            En utilisant de votre client FTP, placez le dossier dans votre dossier PrestaShop /modules. Faites attention à ne pas télécharger ce dossier dans le dossier d'un autre module (ce qui peut arriver lorsque l'on fait glisser des éléments). Téléchargez le dossier en entier, pas seulement les fichiers qu'il contient.
+          </li>
+          <li>
+            Accédez à votre back-office, dans l'onglet 'Modules'.
+          </li>
+          <li>
+            Repérez le nouveau module dans la liste des modules. Vous pourriez avoir à faire défiler; vous pouvez également utiliser le moteur de recherche de la liste, qui devrait vous donner une liste mise à jour dynamiquement de la correspondance des noms de modules.
+          </li>
+          <li>
+            Dans la ligne du nouveau module, cliquez sur le bouton «Installer».
+          </li>
+        </ol>
+      </section>
+<section>
+<div class="page-header">
+<h3>Utilisation</h3>
+</div>
+<ol><li> Définissez les jours de livraison possible dans la page de configuration du module
+</li><li> Un calendrier apparait à côté du choix du transporteur lorsque un client passe commande lui permettant de choisir une date de livraison.
+</li><li> La date choisie apparait dans le détail de commande
+</li></ol>
+</section><section>
+<div class="page-header">
+<h3>Paramètres</h3>
+</div>
+<h4><span id="use_group">Gérer par groupe</span></h4>
+<p>Vous pouvez définir les jours des livraisons globalement pour tous les clients ou par groupe de clients. Si, par exemple, vos clients sont classés par zone de livraison cela peut être utile.
+</p>
+<h4><span id="enabled">Activer pour ...</span></h4>
+<p>Cette option n'apparait que si "Gérer par groupe" est activé. Choisissez quels groupes de clients peuvent choisir un jour de livraison.
+</p>
+<h4><span id="required">Requis pour commander</span></h4>
+<p>Activer cette option pour forcer le client a choisir un jour de livraison. Il ne pourra pas finaliser sa commande sinon.
+</p>
+<h4><span id="id_employee">Envoyer la date de livraison à ...</span></h4>
+<p>Quand une commande est créée le module peut envoyer la date de livraison demandée par e-mail à un employé. Sélectionnez "Personne" pour désactiver cette fonctionnalité.
+</p>
+<h4><span id="mailcustomer">Envoyer la date de livraison au client</span></h4>
+<p>Quand une commande est créée le module peut envoyer la date de livraison demandée au client pour rappel.
+</p>
+<h4><span id="separate_mail">Utiliser un e-mail séparé</span></h4>
+<p>N'apparait que si "Envoyer la date de livraison au client" est activé. La date de livraison demandée peut être envoyée dans la confirmation de commande ou dans un e-mail séparé.
+</p><p>Cet email peut être modifier dans l'outil de traduction de Prestashop.
+</p>
+<h4><span id="add_column">Voir la date de livraison dans la liste des commandes</span></h4>
+<p>Cette option ajoute une colonne "Date de livraison" dans l'onglet «&#160;Commandes&#160;»
+</p>
+<h3>Jours de livraison</h3>
+<p>Si l'option "Gérer par groupe" est activée, les valeurs suivantes sont a définir pour chaque groupe.
+</p>
+<h4><span id="deliver">Livrer</span></h4>
+<p>Pour chaque jours de la semaine, choisissez si la livraison est possible
+</p>
+<h4><span id="deadline">Date limite de livraison</span></h4>
+<p>Pour chaque jour livrable vous devez définir le moment à partir duquel il n'est plus possible de commander. Par exemple si pour livrer une commande le mardi elle doit être passé le lundi avant 14h, indiquez en fasse de mardi 1 jour(s) avant à 14:00
+</p><p>Cette option est redondante, mais plus complète, avec <a href="#offset">l'option "Jours de préparation"</a>
+</p>
+<h4><span id="exception">Jours de non livraison</span></h4>
+<p>Sélectionnez les jours où la livraison est impossible indépendamment du jour de la semaine, les jours fériés par exemple.
+</p>
+<h4><span id="offset">Jours de préparation</span></h4>
+<p>Nombre de jours avant qu'une livraison soit possible. Si vous le définissez à 3, un client qui commande un lundi ne pourra pas choisir de jour de livraison avant jeudi.
+</p><p>Cette option est redondante, mais plus simple, avec <a href="#deadline">l'option "Date limite de livraison"</a>
+</p>
+<h4><span id="duration">Jours affichés</span></h4>
+<p>Lorsque le client commande il choisit son jour de livraison dans une liste (même si c'est affiché sous forme de calendrier). Indiquez ici la longueur de cette liste. Attention si vous indiquez 30 jours la liste ne s'arretera pas à la fin du mois prochain mais aura 30 jours de livraison possible. Si vous ne livrez que le lundi, il y aura 30 lundi dans la liste.
+</p>
+<h4><span id="timeframe">Plage horaire</span></h4>
+<p>En plus du jour de livraison le client peut choisir un élément dans la liste que vous définissez ici. En général il s'agit de plage horaire (matin/midi/soir ou 9h/10h/11h...) mais vous pouvez mettre ce que vous voulez.
+</p><p>Laissez la liste vide si vous ne voulez pas utiliser cette fonctionnalité.
+</p>
+</section>
+    </div>
+  </body>
+</html>
+

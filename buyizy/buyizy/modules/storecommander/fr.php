@@ -1,0 +1,36 @@
+<?php
+
+global $_MODULE;
+$_MODULE = array();
+$_MODULE['<{storecommander}prestashop>storecommander_9d96d334549737ec4ca783309b290027'] = 'Module d\'installation de Store Commander';
+$_MODULE['<{storecommander}prestashop>storecommander_7be506d43da786705d3d37fb86733a2b'] = 'Installez Store Commander pour booster votre backoffice';
+$_MODULE['<{storecommander}prestashop>storecommander_15296b292a8dc44ba70559a5ef65aa10'] = 'Attention ! Cette action supprimera définitivement Store Commander.';
+$_MODULE['<{storecommander}prestashop>storecommander_72d3dbd5e90681fbc705e2741ae5ec6c'] = 'Le dossier /modules/storecommander doit être accessible en écriture.';
+$_MODULE['<{storecommander}prestashop>storecommander_0c46a53122255dd55f7b25a94e7dd46c'] = 'ionCube n\'est pas installé !';
+$_MODULE['<{storecommander}prestashop>storecommander_e6d2b840593e19e17c8a2b867db48121'] = 'Store Commander n\'est pas installé !';
+$_MODULE['<{storecommander}prestashop>storecommander_ff99dd707c37ffeab73f35227a7f635b'] = 'Prêt pour l\'installation !';
+$_MODULE['<{storecommander}prestashop>storecommander_3073d2c6580ce919dba984cd91ceac80'] = 'Première étape';
+$_MODULE['<{storecommander}prestashop>storecommander_592b7808cd553b8ddfb47d73dd24d9e1'] = 'Télécharger et préparer Store Commander';
+$_MODULE['<{storecommander}prestashop>storecommander_c2431c83bbd1ea97cb1173378b72c19b'] = 'Pour faire fonctionner Store Commander, vous devez activer ionCube sur votre hébergement';
+$_MODULE['<{storecommander}prestashop>storecommander_65797f07012ead55be37bbcd5373c82d'] = 'Quel est votre hébergeur ?';
+$_MODULE['<{storecommander}prestashop>storecommander_3e8ac37ecd227615222cbc12e1ba7593'] = 'OVH';
+$_MODULE['<{storecommander}prestashop>storecommander_69c8caa6103cf5cca239ff583a3d1806'] = 'Hébergement mutualisé';
+$_MODULE['<{storecommander}prestashop>storecommander_1d4ca39d45e2fe848cf1b0a0d36c0553'] = 'Serveur dédié';
+$_MODULE['<{storecommander}prestashop>storecommander_40f6d33110b853889ba80dac0fda3163'] = '1AND1';
+$_MODULE['<{storecommander}prestashop>storecommander_6ca869febedd950d9d12b3051fbd4ed2'] = 'Utiliser le guide expert pour installer ionCube';
+$_MODULE['<{storecommander}prestashop>storecommander_46175bbff78c17b04a1a187e0fd42f64'] = 'Vous ne savez pas';
+$_MODULE['<{storecommander}prestashop>storecommander_134b2f4bc92636571f803b6506f3de9f'] = 'Lisez les instructions suivantes (en anglais) :';
+$_MODULE['<{storecommander}prestashop>storecommander_6224f465ac2d04dcc3c8a2f3acad4933'] = 'Après l\'installation de ionCube, relancez cette page.';
+$_MODULE['<{storecommander}prestashop>storecommander_c339d1fe8d92140317dc579ad6c803da'] = 'Vous venez d\'installer ionCube ? Cliquez ici pour relancer cette page';
+$_MODULE['<{storecommander}prestashop>storecommander_7a4e2ab40d4c22b553f0263ae957ce92'] = 'Pas de soucis !';
+$_MODULE['<{storecommander}prestashop>storecommander_667dba9f489e058fa3f592153fbc095a'] = 'Il suffit de poser la question à votre hébergeur :';
+$_MODULE['<{storecommander}prestashop>storecommander_8015799be9516064e290cfbd8ec39171'] = '\"Comment installer ionCube sur mon hébergement ?\"';
+$_MODULE['<{storecommander}prestashop>storecommander_58480143001702c26e8521546c1b4431'] = 'Nous allons créer un fichier de configuration automatiquement :';
+$_MODULE['<{storecommander}prestashop>storecommander_fb2a4f596161c904e087579a4cd50bd0'] = 'Un nouveau fichier .htaccess va être créé dans le dossier de Store Commander.';
+$_MODULE['<{storecommander}prestashop>storecommander_a27d2a78013e2c2b5dca050aa1b6fc7b'] = 'Après l\'installation, la page est automatiquement relancée.';
+$_MODULE['<{storecommander}prestashop>storecommander_e31ad1284b7618a9c10777ed99b12e64'] = 'Etape 2';
+$_MODULE['<{storecommander}prestashop>storecommander_1662d8a202864d7b8c1997819dc6c555'] = 'Créer une configuration pour OVH';
+$_MODULE['<{storecommander}prestashop>storecommander_1c49c953d0e77ce273896ef142fe3e58'] = 'Un nouveau fichier php.ini va être créé dans le dossier de Store Commander.';
+$_MODULE['<{storecommander}prestashop>storecommander_48ac7b1b26fc8922fc525f92e657f8af'] = 'Créer une configuration pour 1AND1';
+$_MODULE['<{storecommander}prestashop>storecommander_c9f77c297aab767773ef32f6dabac2fd'] = 'Store Commander est installé. Vous pourrez lancer l\'application depuis le menu d\'accès rapide.';
+$_MODULE['<{storecommander}prestashop>storecommander_ae437fc9697d481db7a3fad5e2b51b46'] = 'Lancer Store Commander';

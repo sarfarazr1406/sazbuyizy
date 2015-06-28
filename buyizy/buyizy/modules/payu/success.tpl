@@ -1,0 +1,9 @@
+<head>    {literal}	<!-- Facebook Conversion Code for Checkout- Sarfaraz -->    <script>(function() {        var _fbq = window._fbq || (window._fbq = []);        if (!_fbq.loaded) {            var fbds = document.createElement('script');            fbds.async = true;            fbds.src = '//connect.facebook.net/en_US/fbds.js';            var s = document.getElementsByTagName('script')[0];            s.parentNode.insertBefore(fbds, s);            _fbq.loaded = true;        }    })();    window._fbq = window._fbq || [];    window._fbq.push(['track', '6027337779003', {'value':'0.00','currency':'INR'}]);    </script>    <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6027337779003&amp;cd[value]=0.00&amp;cd[currency]=INR&amp;noscript=1" /></noscript>	{/literal}</head><br /><p>{l s='Congratulations! You have successfully placed your order on Buyizy.com.' mod='payu'}        <br />        {l s='Payment Method - PayUMoney Checkout ' mod='payu'}        <br /><span class="bold">{l s='Your order will be delivered soon.' mod='payu'}</span>        <br />{l s='For any questions or for further information, please contact our' mod='payu'} <span><a href="{$link->getPageLink('contact-form', true)|escape:'html'}"><font color="green"><u><b>{l s='customer support' mod='payu'}</b></u></font></a>.</span></p>
+<p >
+	<a href="{$baseUrl}" title="Continue Shopping">
+			Continue Shopping
+	<link href="{$baseUrl}themes/default/css/product_list.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="{$baseUrl}themes/default/css/grid_prestashop.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="{$baseUrl}themes/default/css/global.css" rel="stylesheet" type="text/css" media="all" />
+	</a>
+</p>

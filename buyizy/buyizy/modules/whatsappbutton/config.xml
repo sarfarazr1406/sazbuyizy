@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+	<name>whatsappbutton</name>
+	<displayName><![CDATA[WhatsApp Sharing Button]]></displayName>
+	<version><![CDATA[1.1]]></version>
+	<description><![CDATA[WhatsApp sharing is currently supported by iOS and Android. This module will check the current platform and only shows up on supported devices.]]></description>
+	<author><![CDATA[kik-off.com]]></author>
+	<tab><![CDATA[mobile]]></tab>
+	<is_configurable>1</is_configurable>
+	<need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>

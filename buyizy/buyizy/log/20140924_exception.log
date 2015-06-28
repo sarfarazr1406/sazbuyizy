@@ -1,0 +1,4 @@
+*ERROR* 	2014/09/24 - 18:10:18: Property CustomerCore->birthday is not valid at line 846 in file classes/ObjectModel.php
+*ERROR* 	2014/09/24 - 18:31:47: Property CustomerCore->birthday is not valid at line 846 in file classes/ObjectModel.php
+*ERROR* 	2014/09/24 - 18:31:59: Property CustomerCore->birthday is not valid at line 846 in file classes/ObjectModel.php
+*ERROR* 	2014/09/24 - 18:34:46: Property CustomerCore->birthday is not valid at line 846 in file classes/ObjectModel.php

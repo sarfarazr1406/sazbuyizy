@@ -1,0 +1,16 @@
+#samdha_content .ui-datepicker .ui-datepicker-calendar td {
+    border: 0 none;
+    padding: 1px;
+}
+
+#samdha_warper textarea {
+    height: 180px;
+    width: 320px;
+}
+
+#samdha_content table tbody td {
+	border-left: 1px solid #ADADAD;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	overflow: hidden;
+}

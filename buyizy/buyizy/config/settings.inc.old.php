@@ -1,0 +1,19 @@
+<?php
+define('_DB_SERVER_', 'metrommartcom.ipagemysql.com');
+define('_DB_NAME_', 'metromegamart');
+define('_DB_USER_', 'metromegamart');
+define('_DB_PASSWD_', 'manoj.2616608');
+define('_DB_PREFIX_', 'ps_');
+define('_MYSQL_ENGINE_', 'InnoDB');
+define('_PS_CACHING_SYSTEM_', 'CacheMemcache');
+define('_PS_CACHE_ENABLED_', '0');
+define('_MEDIA_SERVER_1_', '');
+define('_MEDIA_SERVER_2_', '');
+define('_MEDIA_SERVER_3_', '');
+define('_COOKIE_KEY_', 'mUn0qQGoJKIeHZbMYZOvmn9mmQNvbjrx14XIXgYea5YhsF2fPuA8vKLp');
+define('_COOKIE_IV_', 'CBXhUgxM');
+define('_PS_CREATION_DATE_', '2014-03-02');
+define('_PS_VERSION_', '1.6.0.6');
+define('_RIJNDAEL_KEY_', 'iPDKjLQNmw1WqosfEK2e5TRd7cLOINau');
+define('_RIJNDAEL_IV_', 'YybRNfWmpIJsac/UjVXa0w==');
+define('_PS_DIRECTORY_', '/../../');

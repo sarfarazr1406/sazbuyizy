@@ -26,7 +26,7 @@
 
 /* Debug only */
 if (!defined('_PS_MODE_DEV_'))
-define('_PS_MODE_DEV_', FALSE);
+define('_PS_MODE_DEV_', TRUE);
 /* Compatibility warning */
 define('_PS_DISPLAY_COMPATIBILITY_WARNING_', false);
 if (_PS_MODE_DEV_)

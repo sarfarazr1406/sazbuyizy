@@ -166,15 +166,22 @@
 				else if (tomoDate == selectedDate[2]) {
 				if(hrs >= 21 ) {
 					    document.getElementById("deliverydays_timeframe").options[0].disabled = true;
+						document.getElementById("deliverydays_timeframe").options[1].disabled = false;
+					    document.getElementById("deliverydays_timeframe").options[2].disabled = false;
+						document.getElementById("deliverydays_timeframe").options[3].disabled = false;
+						selectTime.options[1].selected=true;
+						document.getElementById("selDate").innerHTML=" " + selectedDateG + " (Tomorrow) ";
+			            document.getElementById("selTime").innerHTML=" " + document.getElementById("deliverydays_timeframe").value + " ";
+						
+					} else if (hrs >= 23) {
+				        document.getElementById("deliverydays_timeframe").options[0].disabled = true;
 						document.getElementById("deliverydays_timeframe").options[1].disabled = true;
 					    document.getElementById("deliverydays_timeframe").options[2].disabled = false;
 						document.getElementById("deliverydays_timeframe").options[3].disabled = false;
 						selectTime.options[2].selected=true;
 						document.getElementById("selDate").innerHTML=" " + selectedDateG + " (Tomorrow) ";
 			            document.getElementById("selTime").innerHTML=" " + document.getElementById("deliverydays_timeframe").value + " ";
-						
-					}
-					else {
+				    } else {
 					    document.getElementById("deliverydays_timeframe").options[0].disabled = false;
 					    document.getElementById("deliverydays_timeframe").options[1].disabled = false;
 					    document.getElementById("deliverydays_timeframe").options[2].disabled = false;

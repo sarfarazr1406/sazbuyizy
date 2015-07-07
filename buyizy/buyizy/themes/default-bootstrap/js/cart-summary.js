@@ -909,7 +909,7 @@ function updateCartSummary(json)
 	}
 	else {
 		$('.cart_free_shipping').hide();
-		var free = 399 - (json.total_price-json.total_shipping);
+		var free = 250 - (json.total_price-json.total_shipping);
 		$('.free_ship_msg').fadeIn();
 		$('#free_ship_amt').html(formatCurrency(free, currencyFormat, currencySign, currencyBlank));
     }

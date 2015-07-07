@@ -100,7 +100,7 @@
 				{if $use_taxes}
 					{if $priceDisplay}
 						<tr class="cart_total_price">
-						{assign var='free' value=399 - $total_products_wt}
+						{assign var='free' value=250 - $total_products_wt}
 							<td rowspan="{3+$total_discounts_num+$use_show_taxes+$total_wrapping_taxes_num}" colspan="3" id="cart_voucher" class="cart_voucher">
 							{if $free > 0}
 							    <strong><span class="free_ship_msg">Shop for <span id="free_ship_amt">{displayPrice price=$free}</span> more to avail free delivery.</span></strong>
@@ -136,7 +136,7 @@
 						</tr>
 					{else}
 						<tr class="cart_total_price">
-						{assign var='free' value=399 - $total_products_wt}
+						{assign var='free' value=250 - $total_products_wt}
 							<td rowspan="{3+$total_discounts_num+$use_show_taxes+$total_wrapping_taxes_num}" colspan="2" id="cart_voucher" class="cart_voucher">
 							{if $free > 0}
 							    <strong><span class="free_ship_msg">Shop for <span id="free_ship_amt">{displayPrice price=$free}</span> more to avail free delivery.</span></strong>
@@ -173,7 +173,7 @@
 					{/if}
 				{else}
 					<tr class="cart_total_price">
-					{assign var='free' value=399 - $total_products_wt}
+					{assign var='free' value=250 - $total_products_wt}
 						<td rowspan="{3+$total_discounts_num+$use_show_taxes+$total_wrapping_taxes_num}" colspan="2" id="cart_voucher" class="cart_voucher">
 						    {if $free > 0}
 							    <strong><span class="free_ship_msg" style="font-size:18px;">Shop for <span id="free_ship_amt">{displayPrice price=$free}</span> more to avail free delivery.</span></strong>

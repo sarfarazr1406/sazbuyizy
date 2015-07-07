@@ -23,10 +23,13 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 <div id="contact-link">
+	<a href="http://www.buyizy.com/content/14-FAQ">FAQs</a>
+</div>
+<div id="contact-link">
 	<a href="{$link->getPageLink('contact', true)|escape:'html':'UTF-8'}" title="{l s='Contact Us' mod='blockcontact'}">{l s='Contact us' mod='blockcontact'}</a>
 </div>
 {if $telnumber}
 	<span class="shop-phone">
-		<span style='margin-right:8px'>Pune |</span><i class="icon-phone"></i>{l s='Call now to order: ' mod='blockcontact'} <strong>{$telnumber}</strong>&nbsp;&nbsp;&nbspIzyOrder : Go to order history in your account and reorder any previous order. Quick & Simple!!! 
+		<span style='margin-right:8px'>Pune |</span><i class="icon-phone"></i>{l s='Call now to order: ' mod='blockcontact'} <strong>{$telnumber}</strong>
 	</span>
 {/if}

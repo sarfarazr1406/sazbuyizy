@@ -149,3 +149,10 @@
 						{if isset($left_column_size) && isset($right_column_size)}{assign var='cols' value=(12 - $left_column_size - $right_column_size)}{else}{assign var='cols' value=12}{/if}
 						<div id="center_column" class="center_column col-xs-12 col-sm-{$cols|intval}">
 	{/if}
+	{literal}
+	    <script>
+  	    (function (w,i,d,g,e,t,s) {w[d] = w[d]||[];t= i.createElement(g);
+    	    t.async=1;t.src=e;s=i.getElementsByTagName(g)[0];s.parentNode.insertBefore(t, s);
+  	    })(window, document, '_gscq','script','//widgets.getsitecontrol.com/21080/script.js');
+	    </script>
+	{/literal}

@@ -133,7 +133,7 @@
 				var selectTime=document.getElementById("deliverydays_timeframe");		
 				selectTime.disabled=false;
 				var weekday = new Array();
-                weekday[6] = "Sunday";
+                                weekday[6] = "Sunday";
 				weekday[0] = "Monday";
 				weekday[1] = "Tuesday";
 				weekday[2] = "Wednesday";
@@ -141,27 +141,30 @@
 				weekday[4] = "Friday";
 				weekday[5] = "Saturday";
 				if(day == selectedDate[2]) {
- 
-					
-					if(hrs > 12 ) {
-					   
-						document.getElementById("deliverydays_timeframe").disabled = true;
-						$('#selectedMsdDiv').hide();
-						alert("The slots are full. Please select another date.");
-						$('#notSelectedMsdDiv').show();
-						
-						
-					}
-					
-					else {
-						document.getElementById("deliverydays_timeframe").options[0].disabled = true;
-						document.getElementById("deliverydays_timeframe").options[1].disabled = true;
-					    document.getElementById("deliverydays_timeframe").options[2].disabled = false;
-						document.getElementById("deliverydays_timeframe").options[3].disabled = false;
-						selectTime.options[2].selected=true;
-						document.getElementById("selDate").innerHTML=" " + selectedDateG + " (Today) ";
-			            document.getElementById("selTime").innerHTML=" " + document.getElementById("deliverydays_timeframe").value + " ";
-					}
+				    if (hrs < 12) {
+				        document.getElementById("deliverydays_timeframe").options[0].disabled = true;
+				        document.getElementById("deliverydays_timeframe").options[1].disabled = true;
+				        document.getElementById("deliverydays_timeframe").options[2].disabled = false;
+				        document.getElementById("deliverydays_timeframe").options[3].disabled = false;
+				        selectTime.options[2].selected=true;
+				        document.getElementById("selDate").innerHTML=" " + selectedDateG + " (Today) ";
+				        document.getElementById("selTime").innerHTML=" " + document.getElementById("deliverydays_timeframe").value + " ";
+				    }
+                                    if (hrs >= 12 && hrs < 14) {
+                                        document.getElementById("deliverydays_timeframe").options[0].disabled = true;
+                                        document.getElementById("deliverydays_timeframe").options[1].disabled = true;
+                                        document.getElementById("deliverydays_timeframe").options[2].disabled = true;
+                                        document.getElementById("deliverydays_timeframe").options[3].disabled = false;
+                                        document.getElementById("selDate").innerHTML=" " + selectedDateG + " (Today) ";
+                                        document.getElementById("selTime").innerHTML=" " + document.getElementById("deliverydays_timeframe").value + " ";
+                                        selectTime.options[3].selected=true;
+                                    } else if (hrs >= 14){
+                                          document.getElementById("deliverydays_timeframe").disabled = true;
+                                          $('#selectedMsdDiv').hide();
+                                          alert("The slots are full. Please select another date.");
+                                          $('#notSelectedMsdDiv').show();
+                                    }
+                                    
 				}
 				else if (tomoDate == selectedDate[2]) {
 				if(hrs >= 21 ) {

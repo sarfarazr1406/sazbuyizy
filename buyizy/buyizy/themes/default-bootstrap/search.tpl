@@ -49,9 +49,9 @@ class="page-heading {if !isset($instant_search) || (isset($instant_search) && !$
 {if !$nbProducts}
 	<p class="alert alert-warning">
 		{if isset($search_query) && $search_query}
-			{l s='Did not find what you were searching for? Suggest us the product at suggestions@buyizy.com and we will make sure it is available next time you land on our website.'}&nbsp;"
+			{l s='Did not find what you were searching for? Suggest us the product at suggestions@buyizy.com and we will make sure it is available next time you land on our website.'}&nbsp;
 		{elseif isset($search_tag) && $search_tag}
-			{l s='Did not find what you were searching for? Suggest us the product at suggestions@buyizy.com and we will make sure it is available next time you land on our website.'}&nbsp;"
+			{l s='Did not find what you were searching for? Suggest us the product at suggestions@buyizy.com and we will make sure it is available next time you land on our website.'}&nbsp;
 		{else}
 			{l s='Please enter a search keyword'}
 		{/if}

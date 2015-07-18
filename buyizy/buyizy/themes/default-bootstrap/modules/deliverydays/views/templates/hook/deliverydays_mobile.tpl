@@ -168,9 +168,9 @@
                                         document.getElementById("deliverydays_timeframe").options[1].disabled = true;
                                         document.getElementById("deliverydays_timeframe").options[2].disabled = true;
                                         document.getElementById("deliverydays_timeframe").options[3].disabled = false;
+										selectTime.options[3].selected=true;
                                         document.getElementById("selDate").innerHTML=" " + selectedDateG + " (Today) ";
                                         document.getElementById("selTime").innerHTML=" " + document.getElementById("deliverydays_timeframe").value + " ";
-                                        selectTime.options[3].selected=true;
                                     } else if (hrs >= 14){
                                           document.getElementById("deliverydays_timeframe").disabled = true;
                                           $('#selectedMsdDiv').hide();

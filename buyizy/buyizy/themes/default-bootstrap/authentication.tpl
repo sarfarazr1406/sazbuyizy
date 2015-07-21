@@ -59,6 +59,7 @@
 					<div class="form-group">
 						<label for="email_create">{l s='Email address'}</label>
 						<input type="text" class="is_required validate account_input form-control" data-validate="isEmail" id="email_create" name="email_create" value="{if isset($smarty.post.email_create)}{$smarty.post.email_create|stripslashes}{/if}" />
+                        <p style="margin-top:2px;color:#F89938;"><strong>{l s='Look for the bumper 20% discount voucher in your inbox.'}</strong></p>
 					</div>
 					<div class="submit">
 						{if isset($back)}<input type="hidden" class="hidden" name="back" value="{$back|escape:'html':'UTF-8'}" />{/if}

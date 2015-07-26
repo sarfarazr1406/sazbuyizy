@@ -5,7 +5,7 @@
 	<title>Message from {shop_name}</title>
 </head>
 <body>
-					<table class="table table-mail" style="width: 100%; margin-top: 10px; -moz-box-shadow: 0 0 5px #afafaf; -webkit-box-shadow: 0 0 5px #afafaf; -o-box-shadow: 0 0 5px #afafaf; box-shadow: 0 0 5px #afafaf; filter: progid:DXImageTransform.Microsoft.Shadow(color=#afafaf,Direction=134,Strength=5);">
+								<table class="table table-mail" style="width: 100%; margin-top: 10px; -moz-box-shadow: 0 0 5px #afafaf; -webkit-box-shadow: 0 0 5px #afafaf; -o-box-shadow: 0 0 5px #afafaf; box-shadow: 0 0 5px #afafaf; filter: progid:DXImageTransform.Microsoft.Shadow(color=#afafaf,Direction=134,Strength=5);">
 <tbody>
 <tr>
 <td class="space" style="width: 20px; padding: 7px 0;">&nbsp;</td>
@@ -30,8 +30,8 @@
 <td style="padding: 7px 0;">
 <p style="border-bottom: 1px solid #D6D4D4; margin: 3px 0 7px; text-transform: uppercase; font-weight: 500; font-size: 18px; padding-bottom: 10px;" data-html-only="1">Your {shop_name} login details</p>
 <p><span style="color: #555454; font-family: Open-sans, sans-serif; font-size: small;"><span style="color: #777;"> Here are your login details:<br /> <span style="color: #333;"><strong>E-mail address: <a style="color: #337ff1;" href="mailto:{email}">{email}</a></strong></span><br /> <span style="color: #333;"><strong>Password:</strong></span> {passwd}</span></span></p>
-<p><span style="color: #555454; font-family: Open-sans, sans-serif; font-size: small;"><span style="color: #777;"><span style="color: green;">As we promised, here is your discount coupon. Use code <strong>WELJUL20</strong> on your first order and get mind boggling <strong>20%</strong>&nbsp;discount on total order amount.</span> </span></span></p>
-<p><span style="color: #008000; font-family: Open-sans, sans-serif; font-size: small;"><strong>Note</strong>: Voucher valid till 15th August.</span></p>
+<p><span style="color: #555454; font-family: Open-sans, sans-serif; font-size: small;"><span style="color: #777;"><span style="color: green;">As we promised, here is your discount coupon. Use code <strong>{voucher}</strong> on your first order and get mind boggling <strong>20%</strong>&nbsp;discount on total order amount.</span> </span></span></p>
+<p><span style="color: #008000; font-family: Open-sans, sans-serif; font-size: small;"><strong>Note</strong>: Voucher valid till {date_from}</span></p>
 <p><span style="color: #555454; font-family: Open-sans, sans-serif; font-size: small;"><span style="color: #777;"><span style="color: green;">Want to experience whole new world of grocery shopping? Help yourself for "life-go-easy" shopping a<strong>t </strong><a href="{shop_url}">{shop_name}</a></span>. </span> </span></p>
 </td>
 <td style="padding: 7px 0;" width="10">&nbsp;</td>
@@ -82,6 +82,9 @@
 </tr>
 </tbody>
 </table>
+
+
+
 
 
 

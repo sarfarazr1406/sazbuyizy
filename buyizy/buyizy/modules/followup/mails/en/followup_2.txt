@@ -1,4 +1,3 @@
-
 [{shop_url}] 
 
 Hi {firstname} {lastname},
@@ -11,7 +10,7 @@ do not waste a moment!
 
 HERE IS YOUR COUPON: {voucher_num}
 
-Enter this code in your shopping cart to get your discount. 
+Enter this code in your shopping cart to get your discount. 		 
 
 {shop_name} [{shop_url}] powered by
 PrestaShop(tm) [http://www.prestashop.com/] 

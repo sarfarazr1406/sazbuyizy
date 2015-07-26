@@ -1,6 +1,6 @@
 <?php
 /*
-* 2007-2014 PrestaShop
+* 2007-2015 PrestaShop
 *
 * NOTICE OF LICENSE
 *
@@ -19,7 +19,7 @@
 * needs please refer to http://www.prestashop.com for more information.
 *
 *  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2014 PrestaShop SA
+*  @copyright  2007-2015 PrestaShop SA
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 */
@@ -33,7 +33,7 @@ class Followup extends Module
 	{
 		$this->name = 'followup';
 		$this->tab = 'advertising_marketing';
-		$this->version = '1.6.4';
+		$this->version = '1.6.7';
 		$this->author = 'PrestaShop';
 		$this->need_instance = 0;
 
@@ -42,14 +42,17 @@ class Followup extends Module
 			'PS_FOLLOW_UP_ENABLE_2',
 			'PS_FOLLOW_UP_ENABLE_3',
 			'PS_FOLLOW_UP_ENABLE_4',
+			'PS_FOLLOW_UP_ENABLE_5',
 			'PS_FOLLOW_UP_AMOUNT_1',
 			'PS_FOLLOW_UP_AMOUNT_2',
 			'PS_FOLLOW_UP_AMOUNT_3',
 			'PS_FOLLOW_UP_AMOUNT_4',
+			'PS_FOLLOW_UP_AMOUNT_5',
 			'PS_FOLLOW_UP_DAYS_1',
 			'PS_FOLLOW_UP_DAYS_2',
 			'PS_FOLLOW_UP_DAYS_3',
 			'PS_FOLLOW_UP_DAYS_4',
+			'PS_FOLLOW_UP_DAYS_5',
 			'PS_FOLLOW_UP_THRESHOLD_3',
 			'PS_FOLLOW_UP_DAYS_THRESHOLD_4',
 			'PS_FOLLOW_UP_CLEAN_DB'
@@ -145,13 +148,14 @@ class Followup extends Module
 		FROM '._DB_PREFIX_.'cart c
 		LEFT JOIN '._DB_PREFIX_.'orders o ON (o.id_cart = c.id_cart)
 		RIGHT JOIN '._DB_PREFIX_.'customer cu ON (cu.id_customer = c.id_customer)
-		RIGHT JOIN '._DB_PREFIX_.'cart_product cp ON (cp.id_cart = c.id_cart)
 		WHERE DATE_SUB(CURDATE(),INTERVAL 7 DAY) <= c.date_add AND o.id_order IS NULL';
 
 		$sql .= Shop::addSqlRestriction(Shop::SHARE_CUSTOMER, 'c');
 
 		if (!empty($email_logs))
-			$sql .= ' AND c.id_cart NOT IN ('.join(',', $email_logs).') GROUP BY c.id_cart';
+			$sql .= ' AND c.id_cart NOT IN ('.join(',', $email_logs).')';
+			
+		$sql .= ' GROUP BY cu.id_customer';
 
 		$emails = Db::getInstance()->executeS($sql);
 
@@ -185,6 +189,7 @@ class Followup extends Module
 			'2' => array(),
 			'3' => array(),
 			'4' => array(),
+			'5' => array(),
 		);
 		static $executed = false;
 
@@ -209,6 +214,9 @@ class Followup extends Module
 						break;
 					case 4:
 						$id_list['4'][] = $line['id_customer'];
+						break;
+					case 5:
+						$id_list['5'][] = $line['id_cart'];
 						break;
 				}
 			}
@@ -362,6 +370,51 @@ class Followup extends Module
 			}
 		}
 	}
+	
+	/* For all abandoned carts, a discount if ordering before x days */
+	private function abandonedCart($count = false)
+	{
+		$email_logs = $this->getLogsEmail(5);
+		$sql = '
+		SELECT c.id_cart, c.id_lang, c.id_shop, c.secure_key, cu.id_customer, cu.firstname, cu.lastname, cu.email
+		FROM '._DB_PREFIX_.'cart c
+		LEFT JOIN '._DB_PREFIX_.'customer cu ON (cu.id_customer = c.id_customer)
+			WHERE c.id_customer > 0
+			AND c.id_cart NOT IN (SELECT id_cart FROM '._DB_PREFIX_.'orders)
+			AND DATE_SUB(CURDATE(),INTERVAL 1 DAY) <= c.date_upd';
+
+		$sql .= Shop::addSqlRestriction(Shop::SHARE_CUSTOMER, 'c');
+
+		if (!empty($email_logs))
+			$sql .= ' AND c.id_cart NOT IN ('.join(',', $email_logs).')';
+
+		$sql .= ' GROUP BY cu.id_customer';
+
+		$emails = Db::getInstance()->executeS($sql);
+
+		if ($count || !count($emails))
+			return count($emails);
+
+		$conf = Configuration::getMultiple(array('PS_FOLLOW_UP_AMOUNT_5', 'PS_FOLLOW_UP_DAYS_5'));
+		foreach ($emails as $email)
+		{
+			$voucher = $this->createDiscount(5, (float)$conf['PS_FOLLOW_UP_AMOUNT_5'], (int)$email['id_customer'], strftime('%Y-%m-%d', strtotime('+'.(int)$conf['PS_FOLLOW_UP_DAYS_5'].' day')), $this->l('Your abandoned shopping cart'));
+			if ($voucher !== false)
+			{
+				$template_vars = array(
+					'{email}' => $email['email'],
+					'{lastname}' => $email['lastname'],
+					'{firstname}' => $email['firstname'],
+					'{amount}' => $conf['PS_FOLLOW_UP_AMOUNT_5'],
+					'{days}' => $conf['PS_FOLLOW_UP_DAYS_5'],
+					'{voucher_num}' => $voucher->code
+				);
+				Mail::Send((int)$email['id_lang'], 'followup_5', Mail::l('Your abandoned shopping cart', (int)$email['id_lang']), $template_vars, $email['email'], $email['firstname'].' '.$email['lastname'], null, null, null, null, dirname(__FILE__).'/mails/');
+				$this->logEmail(5, (int)$voucher->id, (int)$email['id_customer'], (int)$email['id_cart']);
+			}
+		}
+	}
+
 
 	private function createDiscount($id_email_type, $amount, $id_customer, $date_validity, $description)
 	{
@@ -396,6 +449,7 @@ class Followup extends Module
 			'PS_FOLLOW_UP_ENABLE_2',
 			'PS_FOLLOW_UP_ENABLE_3',
 			'PS_FOLLOW_UP_ENABLE_4',
+			'PS_FOLLOW_UP_ENABLE_5',
 			'PS_FOLLOW_UP_CLEAN_DB'
 		));
 
@@ -407,6 +461,8 @@ class Followup extends Module
 			$this->bestCustomer();
 		if ($conf['PS_FOLLOW_UP_ENABLE_4'])
 			$this->badCustomer();
+		if ($conf['PS_FOLLOW_UP_ENABLE_5'])
+			$this->abandonedCart();
 
 		/* Clean-up database by deleting all outdated discounts */
 		if ($conf['PS_FOLLOW_UP_CLEAN_DB'] == 1)
@@ -469,6 +525,7 @@ class Followup extends Module
 		$n2 = $this->reOrder(true);
 		$n3 = $this->bestCustomer(true);
 		$n4 = $this->badCustomer(true);
+		$n5 = $this->abandonedCart(true);
 
 		$cron_info = '';
 		if (Shop::getContext() === Shop::CONTEXT_SHOP)
@@ -491,7 +548,7 @@ class Followup extends Module
 					'title' => $this->l('Cancelled carts'),
 					'icon' => 'icon-cogs'
 				),
-				'description' => $this->l('For each cancelled cart (with no order), generate a discount and send it to the customer.'),
+				'description' => $this->l('For each cancelled cart in last 7 days (with no order), generate a discount and send it to the customer.'),
 				'input' => array(
 					array(
 						'type' => 'switch',
@@ -542,7 +599,7 @@ class Followup extends Module
 					'title' => $this->l('Re-order'),
 					'icon' => 'icon-cogs'
 				),
-				'description' => $this->l('For each validated order, generate a discount and send it to the customer.'),
+				'description' => $this->l('For each validated order in last 7 days, generate a discount and send it to the customer.'),
 				'input' => array(
 					array(
 						'type' => 'switch',
@@ -593,7 +650,7 @@ class Followup extends Module
 					'title' => $this->l('Best customers'),
 					'icon' => 'icon-cogs'
 				),
-				'description' => $this->l('For each customer raising a threshold, generate a discount and send it to the customer.'),
+				'description' => $this->l('For each customer raising a threshold in last 90 days, generate a discount and send it to the customer.'),
 				'input' => array(
 					array(
 						'type' => 'switch',
@@ -704,6 +761,57 @@ class Followup extends Module
 		$fields_form_6 = array(
 			'form' => array(
 				'legend' => array(
+					'title' => $this->l('Abandoned Carts'),
+					'icon' => 'icon-cogs'
+				),
+				'description' => $this->l('For each abandoned cart in last 1 day, generate a discount and send it to customer.'),
+				'input' => array(
+					array(
+						'type' => 'switch',
+						'is_bool' => true, //retro-compat
+						'label' => $this->l('Enable'),
+						'name' => 'PS_FOLLOW_UP_ENABLE_5',
+						'values' => array(
+							array(
+								'id' => 'active_on',
+								'value' => 1,
+								'label' => $this->l('Enabled')
+							),
+							array(
+								'id' => 'active_off',
+								'value' => 0,
+								'label' => $this->l('Disabled')
+							)
+						),
+					),
+					array(
+						'type' => 'text',
+						'label' => $this->l('Discount amount'),
+						'name' => 'PS_FOLLOW_UP_AMOUNT_5',
+						'suffix' => '%',
+					),
+					array(
+						'type' => 'text',
+						'label' => $this->l('Discount validity'),
+						'name' => 'PS_FOLLOW_UP_DAYS_5',
+						'suffix' => $this->l('day(s)'),
+					),
+					array(
+						'type' => 'desc',
+						'name' => '',
+						'text' => sprintf($this->l('Next process will send: %d e-mail(s)'), $n5)
+					),
+				),
+				'submit' => array(
+					'title' => $this->l('Save'),
+					'class' => 'btn btn-default pull-right'
+				)
+			),
+		);
+
+		$fields_form_7 = array(
+			'form' => array(
+				'legend' => array(
 					'title' => $this->l('General'),
 					'icon' => 'icon-cogs'
 				),
@@ -758,7 +866,8 @@ class Followup extends Module
 			$fields_form_3,
 			$fields_form_4,
 			$fields_form_5,
-			$fields_form_6
+			$fields_form_6,
+			$fields_form_7
 		));
 	}
 
@@ -777,6 +886,9 @@ class Followup extends Module
 			'PS_FOLLOW_UP_AMOUNT_3' => Tools::getValue('PS_FOLLOW_UP_AMOUNT_3', Configuration::get('PS_FOLLOW_UP_AMOUNT_3')),
 			'PS_FOLLOW_UP_AMOUNT_4' => Tools::getValue('PS_FOLLOW_UP_AMOUNT_4', Configuration::get('PS_FOLLOW_UP_AMOUNT_4')),
 			'PS_FOLLOW_UP_ENABLE_4' => Tools::getValue('PS_FOLLOW_UP_ENABLE_4', Configuration::get('PS_FOLLOW_UP_ENABLE_4')),
+			'PS_FOLLOW_UP_AMOUNT_5' => Tools::getValue('PS_FOLLOW_UP_AMOUNT_5', Configuration::get('PS_FOLLOW_UP_AMOUNT_5')),
+			'PS_FOLLOW_UP_ENABLE_5' => Tools::getValue('PS_FOLLOW_UP_ENABLE_5', Configuration::get('PS_FOLLOW_UP_ENABLE_5')),
+			'PS_FOLLOW_UP_DAYS_5' => Tools::getValue('PS_FOLLOW_UP_DAYS_5', Configuration::get('PS_FOLLOW_UP_DAYS_5')),
 			'PS_FOLLOW_UP_DAYS_THRESHOLD_4' => Tools::getValue('PS_FOLLOW_UP_DAYS_THRESHOLD_4', Configuration::get('PS_FOLLOW_UP_DAYS_THRESHOLD_4')),
 			'PS_FOLLOW_UP_DAYS_4' => Tools::getValue('PS_FOLLOW_UP_DAYS_4', Configuration::get('PS_FOLLOW_UP_DAYS_4')),
 			'PS_FOLLOW_UP_CLEAN_DB' => Tools::getValue('PS_FOLLOW_UP_CLEAN_DB', Configuration::get('PS_FOLLOW_UP_CLEAN_DB')),

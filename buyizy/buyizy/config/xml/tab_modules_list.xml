@@ -5,8 +5,9 @@
 <module name="prediggo" position="2"/>
 <module name="ecopresto" position="3"/>
 <module name="shopgate" position="4"/>
-<module name="prestagiftvouchers" position="5"/>
-<module name="dmuassocprodcat" position="6"/>
+<module name="mobfirst" position="5"/>
+<module name="prestagiftvouchers" position="6"/>
+<module name="dmuassocprodcat" position="7"/>
 </tab>
 <tab class_name="AdminCategories" display_type="slider_list">
 <module name="prediggo" position="1"/>
@@ -71,7 +72,8 @@
 <module name="kialasmall" position="5"/>
 <module name="kiala" position="6"/>
 <module name="clickline" position="7"/>
-<module name="expeditor" position="8"/>
+<module name="shiptomyid" position="8"/>
+<module name="expeditor" position="9"/>
 </tab>
 <tab class_name="AdminSlip" display_type="slider_list">
 <module name="lgabonos" position="1"/>
@@ -112,7 +114,8 @@
 <module name="yotpo" position="7"/>
 <module name="riskified" position="8"/>
 <module name="remarkety" position="9"/>
-<module name="veplatform" position="10"/>
+<module name="liveperson" position="10"/>
+<module name="veplatform" position="11"/>
 </tab>
 <tab class_name="AdminContacts" display_type="slider_list">
 <module name="sendinblue" position="1"/>
@@ -121,9 +124,11 @@
 <module name="expressmailing" position="4"/>
 <module name="iadvize" position="5"/>
 <module name="olark" position="6"/>
-<module name="webcallback" position="7"/>
-<module name="remarkety" position="8"/>
-<module name="veplatform" position="9"/>
+<module name="liveperson" position="7"/>
+<module name="webcallback" position="8"/>
+<module name="remarkety" position="9"/>
+<module name="liveperson" position="10"/>
+<module name="veplatform" position="11"/>
 </tab>
 <tab class_name="AdminCartRules" display_type="slider_list">
 <module name="affinityitems" position="1"/>
@@ -131,8 +136,9 @@
 <module name="pushoncart" position="3"/>
 <module name="cartabandonmentpro" position="4"/>
 <module name="remarkety" position="5"/>
-<module name="pricewaiter" position="6"/>
-<module name="couponpop" position="7"/>
+<module name="liveperson" position="6"/>
+<module name="pricewaiter" position="7"/>
+<module name="couponpop" position="8"/>
 </tab>
 <tab class_name="AdminSpecificPriceRule" display_type="slider_list">
 <module name="pushoncart" position="1"/>
@@ -167,10 +173,11 @@
 <module name="vente_flash" position="22"/>
 <module name="privatesale" position="23"/>
 <module name="browsi" position="24"/>
-<module name="giveit" position="25"/>
-<module name="loyalty" position="26"/>
-<module name="veplatform" position="27"/>
-<module name="referralprogram" position="28"/>
+<module name="mobfirst" position="25"/>
+<module name="giveit" position="26"/>
+<module name="loyalty" position="27"/>
+<module name="veplatform" position="28"/>
+<module name="referralprogram" position="29"/>
 </tab>
 <tab class_name="AdminPayment" display_type="default_list">
 <module name="psphipay" position="1"/>
@@ -227,9 +234,10 @@
 <module name="boxdropshipment" position="13"/>
 <module name="purolator" position="14"/>
 <module name="expeditor" position="15"/>
-<module name="upstracking" position="16"/>
-<module name="prestashippingeasy" position="17"/>
-<module name="sellstrom" position="18"/>
+<module name="shiptomyid" position="16"/>
+<module name="upstracking" position="17"/>
+<module name="prestashippingeasy" position="18"/>
+<module name="sellstrom" position="19"/>
 </tab>
 <tab class_name="AdminShipping" display_type="slider_list">
 <module name="seur" position="1"/>
@@ -298,7 +306,8 @@
 </tab>
 <tab class_name="AdminThemes" display_type="slider_list">
 <module name="shopgate" position="1"/>
-<module name="affinityitems" position="2"/>
+<module name="mobfirst" position="2"/>
+<module name="affinityitems" position="3"/>
 </tab>
 <tab class_name="AdminMeta" display_type="slider_list">
 <module name="gadwords" position="1"/>
@@ -329,6 +338,7 @@
 <module name="mynewsletter" position="6"/>
 <module name="mailchimp" position="7"/>
 <module name="remarkety" position="8"/>
+<module name="liveperson" position="9"/>
 </tab>
 <tab class_name="AdminBackup" display_type="slider_list">
 <module name="ovhhosting" position="1"/>

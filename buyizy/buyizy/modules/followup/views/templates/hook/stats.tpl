@@ -38,6 +38,7 @@
 			<th colspan="3">{l s='Re-orders' mod='followup'}</th>
 			<th colspan="3">{l s='Best customers' mod='followup'}</th>
 			<th colspan="3">{l s='Bad customers' mod='followup'}</th>
+            <th colspan="3">{l s='Abandoned Carts' mod='followup'}</th>
 		</tr>
 		<tr>
 			<td class="center">{l s='Sent' mod='followup'}</td>
@@ -50,6 +51,9 @@
 			<td class="center">{l s="Used" mod='followup'}</td>
 			<td class="center">{l s='Conversion (%)' mod='followup'}</td>
 			<td class="center">{l s="Sent" mod='followup'}</td>
+			<td class="center">{l s="Used" mod='followup'}</td>
+			<td class="center">{l s='Conversion (%)' mod='followup'}</td>
+            <td class="center">{l s="Sent" mod='followup'}</td>
 			<td class="center">{l s="Used" mod='followup'}</td>
 			<td class="center">{l s='Conversion (%)' mod='followup'}</td>
 		</tr>

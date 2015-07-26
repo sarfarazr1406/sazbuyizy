@@ -23,5 +23,24 @@ $_LANGMAIL['Password query confirmation'] = 'Forgot password';
 $_LANGMAIL['An answer to your message is available #ct%1$s #tc%2$s'] = 'An answer to your message is available #ct%1$s #tc%2$s';
 $_LANGMAIL['New voucher for your order #%s'] = '';
 $_LANGMAIL['New voucher for your order %s'] = '';
+$_LANGMAIL['Subscription complete'] = '';
+$_LANGMAIL['Newsletter confirmation'] = '';
+$_LANGMAIL['Email verification'] = '';
+$_LANGMAIL['Newsletter voucher'] = '';
+$_LANGMAIL['Your wishlist\\\'s link'] = '';
+$_LANGMAIL['Message from %1$s %2$s'] = '';
+$_LANGMAIL['Your cart and your discount'] = '';
+$_LANGMAIL['Thanks for your order'] = '';
+$_LANGMAIL['You are one of our best customers'] = '';
+$_LANGMAIL['We miss you'] = '';
+$_LANGMAIL['Your abandoned shopping cart'] = '';
+$_LANGMAIL['Product available'] = '';
+$_LANGMAIL['New order : #%d - %s'] = '';
+$_LANGMAIL['Stock coverage'] = '';
+$_LANGMAIL['Product out of stock'] = '';
+$_LANGMAIL['Congratulations!'] = '';
+$_LANGMAIL['Referral Program'] = '';
+$_LANGMAIL['Send your reviews'] = '';
+$_LANGMAIL['%1$s sent you a link to %2$s'] = '';
 
 ?>

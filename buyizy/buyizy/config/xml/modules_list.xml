@@ -147,11 +147,13 @@
 		<module name="klarnaprestashop"/>
 		<module name="klikandpay"/>
 		<module name="kwixo"/>
+		<module name="liveperson"/>
 		<module name="loyaltylion"/>
 		<module name="mailjet"/>
 		<module name="mapubfacile"/>
 		<module name="mercadopagobr"/>
 		<module name="merchantware"/>
+		<module name="mobfirst"/>
 		<module name="mondialrelay"/>
 		<module name="moneybookers"/>
 		<module name="netreviews"/>
@@ -179,6 +181,7 @@
 		<module name="sellstrom"/>
 		<module name="sendinblue"/>
 		<module name="seur"/>
+		<module name="shiptomyid"/>
 		<module name="shopgate"/>
 		<module name="shoppingfeedexport"/>
 		<module name="shoppingfluxexport"/>

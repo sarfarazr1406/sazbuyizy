@@ -359,6 +359,8 @@ class oneall_social_login_tools
 		// Get the language identifier.
 		$context = Context::getContext ();
 		$language_id = $context->language->id;
+		
+		$voucher = self::createDiscount((int)$customer->id);
 
 		// Setup the mail vars.
 		$mail_vars = array();
@@ -366,10 +368,37 @@ class oneall_social_login_tools
 		$mail_vars['{lastname}'] = $customer->lastname;
 		$mail_vars['{email}'] = $customer->email;
 		$mail_vars['{passwd}'] = $password;
+		$mail_vars['{voucher}'] = $voucher->code;
+		$mail_vars['{date_from}'] = $voucher->date_to;
 		$mail_vars['{identity_provider}'] = $identity_provider;
 
 		// Send mail to customer.
 		return @Mail::Send ($language_id, 'oneallsociallogin_account', Mail::l('Welcome!'),$mail_vars, $customer->email, $customer->firstname.' '.$customer->lastname);
+	}
+	
+	public static function createDiscount($id_customer)
+	{
+		$cart_rule = new CartRule();
+		$cart_rule->reduction_percent = 20;
+		$cart_rule->id_customer = (int)$id_customer;
+		$cart_rule->date_to = date('Y-m-d H:i:s', time() + 2592000);
+		$cart_rule->date_from = date('Y-m-d H:i:s', time());
+		$cart_rule->quantity = 1;
+		$cart_rule->quantity_per_user = 1;
+		$cart_rule->cart_rule_restriction = 1;
+		$cart_rule->minimum_amount = 0;
+
+		$languages = Language::getLanguages(true);
+		foreach ($languages as $language)
+			$cart_rule->name[(int)$language['id_lang']] = 'Welcome20';
+
+		$code = 'WEL-'.Tools::strtoupper(Tools::passwdGen(6));
+		$cart_rule->code = $code;
+		$cart_rule->active = 1;
+		if (!$cart_rule->add())
+			return false;
+
+		return $cart_rule;
 	}
 
 

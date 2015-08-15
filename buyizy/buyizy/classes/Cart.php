@@ -839,6 +839,7 @@ class CartCore extends ObjectModel
 	public function updateQty($quantity, $id_product, $id_product_attribute = null, $id_customization = false,
 		$operator = 'up', $id_address_delivery = 0, Shop $shop = null, $auto_add_cart_rule = true)
 	{
+		$QTY_MORE_THAN_THRESHOLD = 999;
 		if (!$shop)
 			$shop = Context::getContext()->shop;
 
@@ -883,6 +884,8 @@ class CartCore extends ObjectModel
 			return $this->deleteProduct($id_product, $id_product_attribute, (int)$id_customization);
 		elseif (!$product->available_for_order || Configuration::get('PS_CATALOG_MODE'))
 			return false;
+		elseif ($quantity > 5)
+			return $QTY_MORE_THAN_THRESHOLD;
 		else
 		{
 			/* Check if the product is already in the cart */
@@ -904,6 +907,9 @@ class CartCore extends ObjectModel
 					if (Pack::isPack($id_product))
 						$product_qty = Pack::getQuantity($id_product, $id_product_attribute);
 					$new_qty = (int)$result['quantity'] + (int)$quantity;
+					if ($new_qty > 5) // For example, 4 max per same product/product-combination allowed
+						return $QTY_MORE_THAN_THRESHOLD;
+						
 					$qty = '+ '.(int)$quantity;
 
 					if (!Product::isAvailableWhenOutOfStock((int)$result2['out_of_stock']))

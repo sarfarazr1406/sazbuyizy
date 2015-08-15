@@ -264,6 +264,8 @@ class CartControllerCore extends FrontController
 				}
 				elseif (!$update_quantity)
 					$this->errors[] = Tools::displayError('You already have the maximum quantity available for this product.', !Tools::getValue('ajax'));
+				elseif ($update_quantity == 999) //Products already in cart and the qty is updated for more than the threshold
+				    $this->errors[] = Tools::displayError('Maximum quantity allowed for this product is 5. If you want to order more, give us a call @9769616815', !Tools::getValue('ajax'));
 				elseif ((int)Tools::getValue('allow_refresh'))
 				{
 					// If the cart rules has changed, we need to refresh the whole cart

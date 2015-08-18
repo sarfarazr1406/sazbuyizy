@@ -93,7 +93,8 @@
 	</p>
 	{if !$opc}
 		<div id="ordermsg" class="form-group">
-			<label>{l s='If you would like to add a comment about your order, please write it in the field below.'}</label>
+			<label>{l s='If you would like to add a comment about your order, please write it in the field below. '}</label>
+			<label>{l s='You can also mention any product which you did not find on our website. We will try our best to make it available with your order.'}</label>
 			<textarea class="form-control" cols="60" rows="6" name="message">{if isset($oldMessage)}{$oldMessage}{/if}</textarea>
 		</div>
 	{/if}

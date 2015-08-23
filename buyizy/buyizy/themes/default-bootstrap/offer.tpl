@@ -86,8 +86,8 @@
 		  <p class="p2">Not enough? We are giving minimum <b>5%</b> discount on MRP for all products. </p>
 		  <h3 class="p1">“1+1=8”? Is that Possible?</h3>
 		  <p class="p2">Yes, it is. Through our <b style="color:#719F41">“refer and earn policy”</b> at Buyizy.com. Refer your friend on Buyizy.com, then you and your friend will get <b style="color:#719F41">8% off</b> on the next order. The Offer Code will be received in your account once your friend shops at Buyizy.com.</h3>
-		  <h3 class="p1">20% discount on the registration</h3>
-		  <p class="p2">Now, you have more reasons to smile. Register to Buyizy.com and you will get a <strong>20% discount</strong> on order amount at checkout. The coupon code will be sent to the registered email-id and the same can be redeemed at checkout.</h3>
+		  <h3 class="p1">15% discount on the registration</h3>
+		  <p class="p2">Now, you have more reasons to smile. Register to Buyizy.com and you will get a <strong>15% discount</strong> on order amount at checkout. The coupon code will be sent to the registered email-id and the same can be redeemed at checkout. (Maximum discount of Rs300 can be availed)</h3>
 		  <div><a class="button-2" href="http://www.buyizy.com/login?back=my-account">I'm Interested</a> </div></br>
 		  <div>
           <p class="p2">Register today for life-go-easy shopping at Buyizy.com. You are just a few clicks away to get your wishes delivered at your doorstep.</p>

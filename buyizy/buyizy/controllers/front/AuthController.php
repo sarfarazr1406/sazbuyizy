@@ -745,7 +745,7 @@ class AuthControllerCore extends FrontController
 	protected function createDiscount($id_customer)
 	{
 		$cart_rule = new CartRule();
-		$cart_rule->reduction_percent = 20;
+		$cart_rule->reduction_percent = 15;
 		$cart_rule->id_customer = (int)$id_customer;
 		$cart_rule->date_to = date('Y-m-d H:i:s', time() + 2592000);
 		$cart_rule->date_from = date('Y-m-d H:i:s', time());
@@ -756,7 +756,7 @@ class AuthControllerCore extends FrontController
 
 		$languages = Language::getLanguages(true);
 		foreach ($languages as $language)
-			$cart_rule->name[(int)$language['id_lang']] = 'Welcome20';
+			$cart_rule->name[(int)$language['id_lang']] = 'Welcome15';
 
 		$code = 'WEL-'.Tools::strtoupper(Tools::passwdGen(6));
 		$cart_rule->code = $code;

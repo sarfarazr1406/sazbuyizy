@@ -920,3 +920,8 @@ Stack trace:
 [22-Jul-2015 17:18:32 Asia/Kolkata] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/buyizy/public_html/controllers/admin/AdminTranslationsController.php on line 2572
 [22-Jul-2015 17:18:32 Asia/Kolkata] PHP Warning:  Invalid argument supplied for foreach() in /home/buyizy/public_html/controllers/admin/AdminTranslationsController.php on line 2572
 [22-Jul-2015 21:49:31 Asia/Kolkata] PHP Parse error:  syntax error, unexpected 'id_lang' (T_STRING) in /home/buyizy/public_html/modules/followup/followup.php on line 412
+[31-Jul-2015 15:06:18 Asia/Kolkata] PHP Fatal error:  Call to a member function hasBeenShipped() on a non-object in /home/buyizy/public_html/controllers/admin/AdminOrdersController.php on line 261
+[31-Jul-2015 15:06:28 Asia/Kolkata] PHP Fatal error:  Call to a member function hasBeenShipped() on a non-object in /home/buyizy/public_html/controllers/admin/AdminOrdersController.php on line 261
+[01-Aug-2015 20:20:11 Asia/Kolkata] PHP Warning:  scandir(/home/buyizy/public_html/modules/mobassistantconnector/mails/en/): failed to open dir: No such file or directory in /home/buyizy/public_html/controllers/admin/AdminTranslationsController.php on line 2572
+[01-Aug-2015 20:20:11 Asia/Kolkata] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/buyizy/public_html/controllers/admin/AdminTranslationsController.php on line 2572
+[01-Aug-2015 20:20:11 Asia/Kolkata] PHP Warning:  Invalid argument supplied for foreach() in /home/buyizy/public_html/controllers/admin/AdminTranslationsController.php on line 2572

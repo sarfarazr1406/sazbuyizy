@@ -1,1 +1,2 @@
 [15-Jan-2015 20:11:28 Asia/Kolkata] PHP Parse error:  syntax error, unexpected '=' in /home/buyizy/public_html/modules/blocklayered/blocklayered.php on line 3026
+[04-Aug-2015 10:27:56 Asia/Kolkata] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 9064909 bytes) in /home/buyizy/public_html/tools/smarty/sysplugins/smarty_internal_templatebase.php on line 217

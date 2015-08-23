@@ -1,0 +1,4 @@
+AuthUserFile "/home/buyizy/.htpasswds/public_html/mysqldump/passwd"
+AuthType Basic
+AuthName "Hi"
+require valid-user

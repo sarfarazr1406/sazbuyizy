@@ -33,3 +33,8 @@
 		<span style='margin-right:8px'>Pune |</span><i class="icon-phone"></i>{l s='Call now to order: ' mod='blockcontact'} <strong>{$telnumber}</strong>
 	</span>
 {/if}
+<div>
+    <span class="shop-phone1" style="margin-left:100px;margin-top:10px;font-size: 18px;">
+	    {l s="Free delivery on orders above Rs. 250"}
+	</span>
+</div>

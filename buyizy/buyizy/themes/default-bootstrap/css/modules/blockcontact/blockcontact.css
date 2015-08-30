@@ -14,6 +14,23 @@
     padding-right: 7px; }
   .shop-phone strong {
     color: white; }
+	
+.shop-phone1 {
+  float: left;
+  padding: 5px 0 10px;
+  line-height: 18px;
+  color: black;
+  font-weight: bold  }
+  @media (max-width: 950px) {
+    .shop-phone1 {
+      display: none; } }
+  .shop-phone1 i {
+    font-size: 21px;
+    line-height: 21px;
+    color: white;
+    padding-right: 7px; }
+  .shop-phone1 strong {
+    color: white; }
 
 #contact-link {
   float: right;

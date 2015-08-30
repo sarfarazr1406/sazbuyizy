@@ -154,7 +154,7 @@
 			<!--<p id="product_reference"{if empty($product->reference) || !$product->reference} style="display: none;"{/if}>
 				<label>{l s='Model'} </label>
 				<span class="editable" itemprop="sku">{if !isset($groups)}{$product->reference|escape:'html':'UTF-8'}{/if}</span>
-			</p>-->
+			</p>
 			{if $product->condition}
 			<p id="product_condition">
 				<label>{l s='Condition'} </label>
@@ -168,7 +168,7 @@
 					<link itemprop="itemCondition" href="http://schema.org/RefurbishedCondition"/>
 					<span class="editable">{l s='Refurbished'}</span>
 				{/if}
-			</p>
+			</p>-->
 			{/if}
 			{if $product->description_short || $packItems|@count > 0}
 				<div id="short_description_block">

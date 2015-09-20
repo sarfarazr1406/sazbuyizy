@@ -683,7 +683,14 @@ abstract class PaymentModuleCore extends Module
 						$delivery = new Address($order->id_address_delivery);
 						$delivery_state = $delivery->id_state ? new State($delivery->id_state) : false;
 						$invoice_state = $invoice->id_state ? new State($invoice->id_state) : false;
-
+                        $result = Db::getInstance()->getRow('
+                           SELECT s.`selfCode`
+                           FROM `'._DB_PREFIX_.'referralcode` s
+                           WHERE s.`id_customer` = '.$this->context->customer->id);
+						$selfCode = '------';
+						if(isset($result['selfCode'])) {
+						    $selfCode = $result['selfCode'];
+						}
 						$data = array(
 						'{firstname}' => $this->context->customer->firstname,
 						'{lastname}' => $this->context->customer->lastname,
@@ -698,6 +705,7 @@ abstract class PaymentModuleCore extends Module
 								'firstname'	=> '<span style="font-weight:bold;">%s</span>',
 								'lastname'	=> '<span style="font-weight:bold;">%s</span>'
 						)),
+						'{selfCode}' => $selfCode,
 						'{delivery_company}' => $delivery->company,
 						'{delivery_firstname}' => $delivery->firstname,
 						'{delivery_lastname}' => $delivery->lastname,

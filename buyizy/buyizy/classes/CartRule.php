@@ -852,6 +852,15 @@ class CartRuleCore extends ObjectModel
 					if($temp < $red_amt) {
 						$reduction_value += $temp;
 					}
+			        if($this->reduction_percent == 6) {
+					$temp = 50;
+					$red_amt = $order_total * $this->reduction_percent / 100;
+					if($temp < $red_amt) {
+						$reduction_value += $temp;
+					}
+					else
+						$reduction_value += $red_amt;
+				}
 					else
 						$reduction_value += $red_amt;
 				}

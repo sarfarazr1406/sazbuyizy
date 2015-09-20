@@ -846,7 +846,7 @@ class CartRuleCore extends ObjectModel
 				foreach ($context->cart->getCartRules(CartRule::FILTER_ACTION_GIFT) as $cart_rule)
 					$order_total -= Tools::ps_round($cart_rule['obj']->getContextualValue($use_tax, $context, CartRule::FILTER_ACTION_GIFT, $package), 2);
 
-				if($this->reduction_percent == 20) {
+				if($this->reduction_percent == 15) {
 					$temp = 300;
 					$red_amt = $order_total * $this->reduction_percent / 100;
 					if($temp < $red_amt) {

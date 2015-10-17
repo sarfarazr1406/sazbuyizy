@@ -847,7 +847,7 @@ class CartRuleCore extends ObjectModel
 					$order_total -= Tools::ps_round($cart_rule['obj']->getContextualValue($use_tax, $context, CartRule::FILTER_ACTION_GIFT, $package), 2);
 
 				if($this->reduction_percent == 15) {
-					$temp = 300;
+					$temp = 150;
 					$red_amt = $order_total * $this->reduction_percent / 100;
 					if($temp < $red_amt) {
 						$reduction_value += $temp;
@@ -866,6 +866,15 @@ class CartRuleCore extends ObjectModel
 				}
 				else if($this->reduction_percent == 10) {
 					$temp = 100;
+					$red_amt = $order_total * $this->reduction_percent / 100;
+					if($temp < $red_amt) {
+						$reduction_value += $temp;
+					}
+					else
+						$reduction_value += $red_amt;
+				}
+				else if ($this->reduction_percent == 8) {
+				    $temp = 60;
 					$red_amt = $order_total * $this->reduction_percent / 100;
 					if($temp < $red_amt) {
 						$reduction_value += $temp;

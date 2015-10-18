@@ -50,7 +50,6 @@ Disallow: */classes/
 Disallow: */config/
 Disallow: */download/
 Disallow: */mails/
-Disallow: */modules/
 Disallow: */translations/
 Disallow: */tools/
 # Files
@@ -70,3 +69,8 @@ Disallow: /search
 Disallow: /quick-order
 Disallow: /guest-tracking
 Disallow: /order-confirmation
+
+#Allow js and css
+Allow: /themes/
+Allow: /js/
+Allow: */modules/

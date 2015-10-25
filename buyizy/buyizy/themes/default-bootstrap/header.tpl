@@ -45,6 +45,9 @@
         <meta name="alexaVerifyID" content="TePU-cJzJg6vF7NrVr0R_XdniAY"/>		
 		<link rel="icon" type="image/vnd.microsoft.icon" href="{$favicon_url}?{$img_update_time}" />
 		<link rel="shortcut icon" type="image/x-icon" href="{$favicon_url}?{$img_update_time}" />
+		{if $page_name == category}
+		    <link rel="canonical" href="{$base_dir}{$request_uri|substr:1}" />
+        {/if}
 {if isset($css_files)}
  
 	{foreach from=$css_files key=css_uri item=media}
@@ -95,6 +98,8 @@
             </script>
             <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6027357254203&amp;cd[value]=0.00&amp;cd[currency]=INR&amp;noscript=1" /></noscript>
 			{/literal}
+			
+		
 	</head>
 	<body{if isset($page_name)} id="{$page_name|escape:'html':'UTF-8'}"{/if} class="{if isset($page_name)}{$page_name|escape:'html':'UTF-8'}{/if}{if isset($body_classes) && $body_classes|@count} {implode value=$body_classes separator=' '}{/if}{if $hide_left_column} hide-left-column{/if}{if $hide_right_column} hide-right-column{/if}{if isset($content_only) && $content_only} content_only{/if} lang_{$lang_iso}">
 	{if !isset($content_only) || !$content_only}
@@ -155,4 +160,5 @@
     	    t.async=1;t.src=e;s=i.getElementsByTagName(g)[0];s.parentNode.insertBefore(t, s);
   	    })(window, document, '_gscq','script','//widgets.getsitecontrol.com/21080/script.js');
 	    </script>
+		
 	{/literal}

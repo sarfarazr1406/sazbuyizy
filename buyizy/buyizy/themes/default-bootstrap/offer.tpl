@@ -109,6 +109,24 @@ text-decoration: none;
 }
 
 </style>
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){
+  i['GoogleAnalyticsObject']=r;
+  i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},
+  i[r].l=1*new Date();
+  a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];
+  a.async=1;
+  a.src=g;
+  m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50115195-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
 </head>
 <body>
 <div id="wrapper">
@@ -321,25 +339,45 @@ text-decoration: none;
 	<article class="offer">
         <div >
           <h3 class="heading">
-          <span style="color:#7cd320;"><strong>How About availing 5 % discount on all commodities?</strong></span></h3>
+          <span style="color:#7cd320;"><a href="http://www.buyizy.com"><strong>How About availing 5 % discount on all commodities?</strong></span></a></h3>
           <h4 >Apart from providing the best quality groceries, we surprise you with 5 % extra discount on all products.</h4>
-		  <p style="font-size: large;">Not enough? Use coupon code <b>“LifeGoEasy”</b> to avail this <b>6% </b>extra discount at checkout. This offer can be redeemed every time you order on Buyizy.com. </p> 
+		  <p style="font-size: large;">Not enough? Use coupon code <b>“LifeGoEasy”</b> to avail this <b>6% </b>extra discount at checkout. This offer can be redeemed every time you order on Buyizy.com*. </p> 
 		  <br><br>
-		  <h3 class="heading">  <span style="color:#7cd320;"><strong>“1+1=100”? Is that Possible?</strong></span></h3>
+		  <h3 class="heading"><a href="http://www.buyizy.com/module/referralcode/code">  <span style="color:#7cd320;"><strong>“1+1=100”? Is that Possible?</strong></span></a></h3>
 		  <p style="font-size: large;">Yes, it is. Through our <b>“refer and earn policy”</b> Refer your friend after completing your first order at Buyizy.com, your friend will get voucher worth <b>Rs 100.</b>
-		   You will get voucher worth <b>Rs 100</b> in your account once your friend shops at Buyizy.com.
+		   You will get voucher worth <b>Rs 100</b> in your account once your friend shops at Buyizy.com*.
 Keep saving!
+		  </p><br>
+		  <h3 class="heading"><a href="http://www.buyizy.com/login?back=my-account">  <span style="color:#7cd320;"><strong>Come on board! And get registration bonanza.</strong></span></a></h3>
+		  <p style="font-size: large;">Sign up with us and get mind boggling 15% discount voucher that your can use on your first order*.
 		  </p><br>
 		  <a class="button" href="http://www.buyizy.com/login?back=my-account">I'm Interested</a>
 		  <div>
           <p style="font-size: large;">Register today for life-go-easy shopping at Buyizy.com. You are just a few clicks away to get your wishes delivered at your doorstep.</p>
-          <h4 >This is not the end, Still more to come. Do follow us on social media for hottest grocery deals in pune.</h4></div></div>
+          <h4 >This is not the end, still more to come. Do follow us on social media for hottest grocery deals in pune.</h4></div></div>
     
-	<a href="http://www.buyizy.com/content/3-terms-and-conditions#offers" class="button">Continue Shopping</a> 
-	<a class="button" href="http://www.buyizy.com">Read Terms and Condition</a> </article>
+	<a href="http://www.buyizy.com" class="button">Continue Shopping</a> 
+	<a class="button" href="http://www.buyizy.com/content/3-terms-and-conditions#offers">Read Terms and Condition</a> </p>
+	<div>
+	<p style="font-size: 16PX;">* Offers T & C.</p>
+	<p style="font-size: 10px;">1. Coupon redemption is purely subjected to standard and specified terms and conditions mentioned on our website.</p>
 
+    <p style="font-size: 10px;">2. The offers can be withdrawn at any point of time, without any prior information to the customer, and the jurisdiction lies solely with us.</p>
 
+    <p style="font-size: 10px;">3. The customer can apply only single coupon code at once. The offers can not be combined with any other deal or offers, whatsoever.</p>
 
+    <p style="font-size: 10px;">4. On the event of any dispute over the offer policy of Buyizy.com, the right of final decision lies solely with the owners of Buyizy.com. </p>
+
+    <p style="font-size: 10px;">5. Maximum discount for LifeGoEasy voucher is Rs 50. Usage of this voucher for a particular user is limited to 5 times.</p>
+
+    <p style="font-size: 10px;">6. Maximum discount that can be availed for abandoned cart voucher is Rs 50.</p>
+
+    <p style="font-size: 10px;">7. Maximum discount that can be availed for "Miss you" voucher is Rs 60. (any voucher with 8% discount follow this cap)</p>
+
+    <p style="font-size: 10px;">8. Maximum discount for WELCOME15 voucher is Rs 150.</p>
+
+    <p style="font-size: 10px;">9. In Refer & Earn program, the SPONSORED customer needs to place minimum order of Rs 500 for availing Rs 100 discount. And the maximum discount for SPONSORER is Rs 100.</p>
+	</div></article>
 
 
 <!--<div class="section">

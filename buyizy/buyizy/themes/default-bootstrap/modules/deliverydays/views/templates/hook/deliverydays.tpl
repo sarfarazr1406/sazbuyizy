@@ -167,7 +167,7 @@
                                     
 				}
 				else if (tomoDate == selectedDate[2]) {
-				if(hrs >= 21 ) {
+				if(hrs >= 20 ) {
 					    document.getElementById("deliverydays_timeframe").options[0].disabled = true;
 						document.getElementById("deliverydays_timeframe").options[1].disabled = false;
 					    document.getElementById("deliverydays_timeframe").options[2].disabled = false;

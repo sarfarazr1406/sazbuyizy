@@ -22,6 +22,20 @@
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
+{literal}
+<script type="text/javascript">
+    $(document).ready(function() {
+	    $url = window.location.href;
+		
+		if ($url.indexOf("referralcode") >= 0) {
+		    $('#referMsg').show();
+		}
+		else
+		    $('#referMsg').hide();
+			
+			});
+</script>
+{/literal}
 {capture name=path}
 	{if !isset($email_create)}{l s='Authentication'}{else}
 		<a href="{$link->getPageLink('authentication', true)|escape:'html':'UTF-8'}" rel="nofollow" title="{l s='Authentication'}">{l s='Authentication'}</a>
@@ -29,6 +43,7 @@
 	{/if}
 {/capture}
 <h1 class="page-heading">{if !isset($email_create)}{l s='Authentication'}{else}{l s='Create an account'}{/if}</h1>
+<p id="referMsg" style="color:green; font-size:18px"><strong>Just login or Sign up and place an order to start referring & sending gift to your loved ones.</strong></p>
 {if isset($back) && preg_match("/^http/", $back)}{assign var='current_step' value='login'}{include file="$tpl_dir./order-steps.tpl"}{/if}
 {include file="$tpl_dir./errors.tpl"}
 {assign var='stateExist' value=false}
@@ -59,7 +74,7 @@
 					<div class="form-group">
 						<label for="email_create">{l s='Email address'}</label>
 						<input type="text" class="is_required validate account_input form-control" data-validate="isEmail" id="email_create" name="email_create" value="{if isset($smarty.post.email_create)}{$smarty.post.email_create|stripslashes}{/if}" />
-                        <p style="margin-top:2px;color:#F89938;"><strong>{l s='Look for the bumper 20% discount voucher in your inbox.'}</strong></p>
+                        <p style="margin-top:2px;color:#F89938;"><strong>{l s='Look for the bumper 15% discount voucher in your inbox.*'}</strong></p>
 					</div>
 					<div class="submit">
 						{if isset($back)}<input type="hidden" class="hidden" name="back" value="{$back|escape:'html':'UTF-8'}" />{/if}

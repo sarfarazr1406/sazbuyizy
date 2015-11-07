@@ -242,10 +242,15 @@ text-decoration: none;
         <div u="slides" style=" position: absolute; left: 0px; top: 0px; width: 1300px;
             height: 500px; overflow: hidden;" onclick="scrollDown();">
             <div>
-                <img u="image" src="img/offer1.png" />
+                <img u="image" src="img/offer1.jpg" />
                 
                
             </div>
+	    <div>
+                <img u="image" src="img/offer4.jpg" />
+               
+            </div>
+
             <div>
                 <img u="image" src="img/offer2.png" />
                
@@ -254,6 +259,11 @@ text-decoration: none;
                 <img u="image" src="img/offer3.png" />
                
             </div>
+	<div>
+                <img u="image" src="img/offerx.png" />
+               
+            </div>
+
         </div>
                 
         <!--#region Bullet Navigator Skin Begin -->
@@ -337,17 +347,31 @@ text-decoration: none;
 
 
 	<article class="offer">
-        <div >
+        <div >    <h3 class="heading"><a href="http://www.buyizy.com/module/referralcode/code">  <span style="color:#7cd320;">
+		<strong>Send a free gift to your loved ones in this diwali dhamaka week</strong></span></a></h3>
+		  <p style="font-size: large;">Now sending a surprise gift for your loved ones on the occasion of diwali is not difficult. 
+		Refer a friend in our Referral program and we will send a surprise gift to your 
+		friend once he <b>registers with Buyizy</b>, <span style="color:#FF0000;"><b>completely free*!</b></span></br></br>
+		Isn't this amazing? So hurry up and send free gifts to your friends in this Diwali.Keep saving!
+		  </p><br>
+		  <a class="button" href="http://www.buyizy.com/module/referralcode/code">Click to refer now and surprise your loved once</a>
+		  <br>
+		
+		 <h3 class="heading"><a href="www.buyizy.com">  <span style="color:#7cd320;"><strong>This diwali, get a surprise gift from Buyizy</strong></span></a></h3>
+		  <p style="font-size: large;">Surprises are amazing. Get an assured gift with every purchase of
+			₹ 500 and above made on or before 11th Nov, 2015.<br><b>Apply coupon code <span style="color:#FF0000;">"DIWALIGIFT"</span> and celebrate this festive season with smiles*.</p><br>
+
           <h3 class="heading">
-          <span style="color:#7cd320;"><a href="http://www.buyizy.com"><strong>How About availing 5 % discount on all commodities?</strong></span></a></h3>
+          <a href="http://www.buyizy.com"><span style="color:#7cd320;"><strong>How About availing 5 % discount on all commodities?</strong></span></a></h3>
           <h4 >Apart from providing the best quality groceries, we surprise you with 5 % extra discount on all products.</h4>
 		  <p style="font-size: large;">Not enough? Use coupon code <b>“LifeGoEasy”</b> to avail this <b>6% </b>extra discount at checkout. This offer can be redeemed every time you order on Buyizy.com*. </p> 
-		  <br><br>
-		  <h3 class="heading"><a href="http://www.buyizy.com/module/referralcode/code">  <span style="color:#7cd320;"><strong>“1+1=100”? Is that Possible?</strong></span></a></h3>
+		  <br>
+		  <h3 class="heading">  <span style="color:#7cd320;"><strong>“1+1=100”? Is that Possible?</strong></span></h3>
 		  <p style="font-size: large;">Yes, it is. Through our <b>“refer and earn policy”</b> Refer your friend after completing your first order at Buyizy.com, your friend will get voucher worth <b>Rs 100.</b>
-		   You will get voucher worth <b>Rs 100</b> in your account once your friend shops at Buyizy.com*.
+		   You will get voucher worth <b>Rs 100</b> in your account once your friend shops at Buyizy.com.
 Keep saving!
 		  </p><br>
+		  
 		  <h3 class="heading"><a href="http://www.buyizy.com/login?back=my-account">  <span style="color:#7cd320;"><strong>Come on board! And get registration bonanza.</strong></span></a></h3>
 		  <p style="font-size: large;">Sign up with us and get mind boggling 15% discount voucher that your can use on your first order*.
 		  </p><br>
@@ -359,12 +383,12 @@ Keep saving!
 	<a href="http://www.buyizy.com" class="button">Continue Shopping</a> 
 	<a class="button" href="http://www.buyizy.com/content/3-terms-and-conditions#offers">Read Terms and Condition</a> </p>
 	<div>
-	<p style="font-size: 16PX;">* Offers T & C.</p>
+	<p style="font-size: 16PX;">* Offers T & C.<strong>(Including Diwali dhamaka offers)<strong></p>
 	<p style="font-size: 10px;">1. Coupon redemption is purely subjected to standard and specified terms and conditions mentioned on our website.</p>
 
     <p style="font-size: 10px;">2. The offers can be withdrawn at any point of time, without any prior information to the customer, and the jurisdiction lies solely with us.</p>
 
-    <p style="font-size: 10px;">3. The customer can apply only single coupon code at once. The offers can not be combined with any other deal or offers, whatsoever.</p>
+    <p style="font-size: 10px;">3. The customer can apply only single coupon code at once. The offers can not be combined with any other deal or offers, unless otherwise specified.</p>
 
     <p style="font-size: 10px;">4. On the event of any dispute over the offer policy of Buyizy.com, the right of final decision lies solely with the owners of Buyizy.com. </p>
 
@@ -376,8 +400,14 @@ Keep saving!
 
     <p style="font-size: 10px;">8. Maximum discount for WELCOME15 voucher is Rs 150.</p>
 
-    <p style="font-size: 10px;">9. In Refer & Earn program, the SPONSORED customer needs to place minimum order of Rs 500 for availing Rs 100 discount. And the maximum discount for SPONSORER is Rs 100.</p>
+    <p style="font-size: 10px;">9. Diwali offers are valid only for the orders placed on or before 11th November, 2015.</p>
+	
+    <p style="font-size: 10px;">10. For sending a gift through our referral program, the referred person needs to register completely with proper address and contact number.</p>
+
+    <p style="font-size: 10px;">11. Multiple accounts created by single person or for the same address will not be eligible for the surprise gift under the referral program and Buyizy has the right to dismiss any such account.</p>
+
 	</div></article>
+
 
 
 <!--<div class="section">

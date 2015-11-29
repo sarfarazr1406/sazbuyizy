@@ -46,6 +46,9 @@ class CustomerCore extends ObjectModel
 
 	/** @var integer Current language used by the customer */
 	public $id_lang;
+	
+	/** @var string Foundus */
+	public $foundus;
 
 	/** @var string Lastname */
 	public $lastname;
@@ -160,6 +163,7 @@ class CustomerCore extends ObjectModel
 		'fields' => array(
 			'secure_key' => 				array('type' => self::TYPE_STRING, 'validate' => 'isMd5', 'copy_post' => false),
 			'lastname' => 					array('type' => self::TYPE_STRING, 'validate' => 'isName', 'required' => true, 'size' => 32),
+			'foundus' =>                                    array('type' => self::TYPE_STRING, 'size' => 32),
 			'firstname' => 					array('type' => self::TYPE_STRING, 'validate' => 'isName', 'required' => true, 'size' => 32),
 			'email' => 						array('type' => self::TYPE_STRING, 'validate' => 'isEmail', 'required' => true, 'size' => 128),
 			'passwd' => 					array('type' => self::TYPE_STRING, 'validate' => 'isPasswd', 'required' => true, 'size' => 32),
@@ -296,7 +300,7 @@ class CustomerCore extends ObjectModel
 	 */
 	public static function getCustomers()
 	{
-		$sql = 'SELECT `id_customer`, `email`, `firstname`, `lastname`
+		$sql = 'SELECT `id_customer`, `email`, `firstname`, `lastname`, `foundus`
 				FROM `'._DB_PREFIX_.'customer`
 				WHERE 1 '.Shop::addSqlRestriction(Shop::SHARE_CUSTOMER).'
 				ORDER BY `id_customer` ASC';

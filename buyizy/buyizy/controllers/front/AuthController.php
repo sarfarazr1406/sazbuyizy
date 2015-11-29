@@ -288,7 +288,7 @@ class AuthControllerCore extends FrontController
 				$this->context->cookie->is_guest = $customer->isGuest();
 				$this->context->cookie->passwd = $customer->passwd;
 				$this->context->cookie->email = $customer->email;
-				
+                                $this->context->cookie->foundus = $customer->foundus;
 				// Add customer to the context
 				$this->context->customer = $customer;
 				
@@ -372,6 +372,10 @@ class AuthControllerCore extends FrontController
 		$passwd_confirm = trim(Tools::getValue('passwd_confirm'));
 		$passwd = trim(Tools::getValue('passwd'));
 		$this->create_account = true;
+		$foundus = $_POST['foundus'];
+		if ($foundus == "null") {
+		    $this->errors[] = Tools::displayError('Please select the source from where you heard about us.');
+		}
 		if (Tools::isSubmit('submitAccount'))
 		{
 			if (empty($passwd_confirm))
@@ -440,7 +444,7 @@ class AuthControllerCore extends FrontController
 				// New Guest customer
 				$customer->is_guest = (Tools::isSubmit('is_new_customer') ? !Tools::getValue('is_new_customer', 1) : 0);
 				$customer->active = 1;
-
+                                $customer->foundus = $foundus;
 				if (!count($this->errors))
 				{
 					if ($customer->add())
@@ -552,6 +556,7 @@ class AuthControllerCore extends FrontController
 			if (!count($this->errors))
 			{
 				$customer->active = 1;
+                $customer->foundus = $foundus;
 				// New Guest customer
 				if (Tools::isSubmit('is_new_customer'))
 					$customer->is_guest = !Tools::getValue('is_new_customer', 1);
@@ -725,6 +730,16 @@ class AuthControllerCore extends FrontController
 		
 		if ($voucher !== false)
 		{
+	        Mail::Send(
+			    $this->context->language->id,
+			    'account2',
+			    Mail::l('Introduction to Buyizy.com'),
+			    array(
+				    '{firstname}' => $customer->firstname
+				),
+			    $customer->email,
+			    $customer->firstname.' '.$customer->lastname
+		    );
 			return Mail::Send(
 			$this->context->language->id,
 			'account',
@@ -745,7 +760,7 @@ class AuthControllerCore extends FrontController
 	protected function createDiscount($id_customer)
 	{
 		$cart_rule = new CartRule();
-		$cart_rule->reduction_percent = 20;
+		$cart_rule->reduction_percent = 15;
 		$cart_rule->id_customer = (int)$id_customer;
 		$cart_rule->date_to = date('Y-m-d H:i:s', time() + 2592000);
 		$cart_rule->date_from = date('Y-m-d H:i:s', time());
@@ -756,7 +771,7 @@ class AuthControllerCore extends FrontController
 
 		$languages = Language::getLanguages(true);
 		foreach ($languages as $language)
-			$cart_rule->name[(int)$language['id_lang']] = 'Welcome20';
+			$cart_rule->name[(int)$language['id_lang']] = 'Welcome15';
 
 		$code = 'WEL-'.Tools::strtoupper(Tools::passwdGen(6));
 		$cart_rule->code = $code;

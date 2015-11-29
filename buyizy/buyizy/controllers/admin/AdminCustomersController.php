@@ -102,6 +102,9 @@ class AdminCustomersControllerCore extends AdminController
 			'email' => array(
 				'title' => $this->l('Email address')
 			),
+			'foundus' => array(
+			    'title' => $this->l('Found us'),
+				'width' => 140)
 		);
 
 		if (Configuration::get('PS_B2B_ENABLE'))

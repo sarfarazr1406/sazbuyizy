@@ -144,6 +144,19 @@
 						<label for="lastname">{l s='Last name'} <sup>*</sup></label>
 						<input type="text" class="is_required validate form-control" data-validate="isName" id="lastname" name="lastname" value="{if isset($smarty.post.lastname)}{$smarty.post.lastname}{/if}" />
 					</div>
+					<div class="required form-group" style="max-width:271px">
+					<p>
+					    <label for="foundus">{l s='How did you find us?'}</label>
+					    <select id="foundus" name="foundus">
+						    <option selected="selected" value="null">-- Please Select One --</option>
+							<option value="search">Search (Google, yahoo, bing)</option>
+							<option value="social">Social sites</option>
+							<option value="friends">Friends</option>
+							<option value="pamphlet">Pamphlets</option>
+							<option value="other">Other</option>
+						</select>
+					</p>
+					</div>
 					<div class="form-group date-select">
 						<label>{l s='Date of Birth'}</label>
 						<div class="row">
@@ -509,6 +522,19 @@
 						</select>
 					</div>
 				</div>
+			</div>
+			<div class="form-group">
+			    <label for="foundus">{l s='How did you find us?'}</label>
+				<p>
+				    <select id="foundus" name="foundus" class="form-control">
+					    <option selected="selected" value="null">-- Please Select One --</option>
+						<option value="search">Search (Google, yahoo, bing)</option>
+						<option value="social">Social sites</option>
+						<option value="friends">Friends</option>
+						<option value="pamphlet">Pamphlets</option>
+					<option value="other">Other</option>
+					</select>
+				</p>
 			</div>
 			{if $newsletter}
 				<div class="checkbox">

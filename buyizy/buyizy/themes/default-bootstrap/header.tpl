@@ -45,8 +45,13 @@
         <meta name="alexaVerifyID" content="TePU-cJzJg6vF7NrVr0R_XdniAY"/>		
 		<link rel="icon" type="image/vnd.microsoft.icon" href="{$favicon_url}?{$img_update_time}" />
 		<link rel="shortcut icon" type="image/x-icon" href="{$favicon_url}?{$img_update_time}" />
-		{if $page_name == category}
-		    <link rel="canonical" href="{$base_dir}{$request_uri|substr:1}" />
+		<!-- canonical -->
+        {if $page_name == 'index' or $page_name == 'search'}
+            <link rel="canonical" href="{$base_dir}" />
+        {elseif $page_name == 'category' or $page_name == 'best-sales' or $page_name == 'cart' or $page_name == 'discount' or $page_name == 'manufacturer' or $page_name == 'new-products' or $page_name == 'prices-drop'}
+            <link rel="canonical" href="{$base_dir}{$request_uri|substr:1|regex_replace:'/\?(.*)/':''}" />
+        {else}
+            <link rel="canonical" href="{$base_dir}{$request_uri|substr:1}" />
         {/if}
 {if isset($css_files)}
  
